@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
-    
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -12,7 +12,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 // import { LandingComponent } from './components/landing/landing.component';
-@NgModule({
+
+
+
+
+@NgModule({  
   declarations: [
     AppComponent,
     LoginComponent,
@@ -22,12 +26,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     DashboardComponent,
     SidebarComponent,
     NavbarComponent
+    // ProductsComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
