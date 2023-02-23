@@ -5,8 +5,8 @@ margin-left: 346px;
 header{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
     left: 345px;
     width: calc(100% - 345px);
@@ -15,6 +15,12 @@ header{
     /* height: 50px; */
 
 }
+
+
+#nav-toggle{
+    
+}
+
 header h2{
     color: #222;
 }
@@ -55,7 +61,11 @@ header label span{
 .user-wrapper img{
     border-radius: 50%;
     margin-right: 1rem;
-    height: inherit;
+    /* height: inherit; */
+}
+
+.user-wrapper h4 {
+    margin-bottom: 0rem !important;
 }
 .user-wrapper small{
     display: inline-block;
@@ -67,7 +77,7 @@ main{
     margin-top: 85px;
     padding: 2rem 1.5rem;
     background: #f1f5f9;
-    min-height: calc(100vh -9 0px);
+    min-height: calc(100vh - 90px);
 }
 
 .cards{
@@ -75,6 +85,7 @@ main{
     /* justify-content: space-between; */
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
+    margin-top: 1rem;
 }
 
 .cards-single{
@@ -84,6 +95,9 @@ main{
     padding: 2rem;
     border-radius: 2px;
 }
+/* .cards-single h1 + span {
+    color: gray;
+} */
 
 
 .cards-single div:first-child span{
@@ -102,11 +116,100 @@ main{
 
 }
 
-.cards-single:last-child h1
-.cards-single:last-child div:first-child span
+.cards-single:last-child h1,
+.cards-single:last-child div:first-child span,
 .cards-single:last-child div:last-child span{
     color: #fff;
     /* 21.31 */
 
 }
 
+.recent-grid{
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: 67% auto;
+    grid-gap: 2rem;
+}
+
+.card{
+    background: #fff;
+    border-radius: 5px;
+}
+
+.card-header{
+    padding: 1rem;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header button{
+    background-color: rgb(209, 0, 195) ;
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid  rgb(209, 0, 195) ;
+}
+
+thead tr{
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.table-responsive{
+    width: 100%;
+    overflow-x: auto;
+}
+
+thead td{
+    font-weight: 700;
+
+}
+td{
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    color: #222;
+}
+td img{
+    border-radius: 50%;
+}
+
+table{
+border-collapse: collapse;
+}
+
+
+.customer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .7rem;
+}
+.info{
+    display: flex;
+    align-items: center;
+}
+
+.info img{
+    border-radius: 50%;
+    margin-right: 1rem;
+
+}
+.info h4{
+    font-size: .8rem;
+    font-weight: 700;
+    color: #222;
+}
+.info small{
+    font-weight: 600;
+    color: gray;
+}
+.contact span{
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: .5rem;
+    color: rgb(209, 0, 195);
+}

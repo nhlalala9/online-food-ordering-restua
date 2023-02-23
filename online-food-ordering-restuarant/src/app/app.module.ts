@@ -10,6 +10,7 @@ import { ToastComponent } from './components/toast/toast.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 // import { LandingComponent } from './components/landing/landing.component';
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ToastComponent,
     LoginComponent,
     DashboardComponent,
-    SidebarComponent
+    SidebarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
