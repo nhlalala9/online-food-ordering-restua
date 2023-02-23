@@ -64,8 +64,48 @@ header label span{
 }
 
 main{
-    margin-top: 90px;
+    margin-top: 85px;
     padding: 2rem 1.5rem;
-    background: #f1f5f0;
+    background: #f1f5f9;
     min-height: calc(100vh -9 0px);
 }
+
+.cards{
+    display: grid;
+    /* justify-content: space-between; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.cards-single{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+
+.cards-single div:first-child span{
+    color: gray;
+
+}
+
+.cards-single div:last-child span{
+    font-size: 3rem;
+    color: rgb(209, 0, 195);
+
+}
+
+.cards-single:last-child {
+    background: rgb(209, 0, 195);
+
+}
+
+.cards-single:last-child h1
+.cards-single:last-child div:first-child span
+.cards-single:last-child div:last-child span{
+    color: #fff;
+
+}
+
