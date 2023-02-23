@@ -106,6 +106,7 @@ main{
 .cards-single:last-child div:first-child span
 .cards-single:last-child div:last-child span{
     color: #fff;
+    /* 21.31 */
 
 }
 
