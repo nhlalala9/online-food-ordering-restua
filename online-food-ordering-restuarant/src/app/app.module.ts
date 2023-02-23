@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 // import { LandingComponent } from './components/landing/landing.component';
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RegisterComponent,
     ToastComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
