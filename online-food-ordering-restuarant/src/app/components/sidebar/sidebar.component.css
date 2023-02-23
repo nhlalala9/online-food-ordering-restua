@@ -15,6 +15,7 @@
     text-decoration: none;
     background: rgb(209, 0, 195);
     z-index: 100%;
+    transition: width 300ms;
 }
 
 .sidebar-brand{
