@@ -1,0 +1,31 @@
+thead tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+td {
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #f0f0f0;
+   
+}
+
+thead td {
+    font-weight: 700;
+
+}
+/* .image-header{
+    margin-bottom: 10px;
+} */
+.table-responsive {
+    width: 80%;
+    margin: 5rem auto;
+}
+.main-content {
+    margin-left: 345px;
+    transition: margin-left 300ms;
+}
