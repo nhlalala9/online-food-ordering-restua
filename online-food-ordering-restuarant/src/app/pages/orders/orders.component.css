@@ -28,3 +28,14 @@ thead td {
     width: 90%;
     margin: 5rem auto;
 }
+
+.container{
+    border: 1px solid grey;
+    width: 40%;
+    margin-left:0;
+}
+
+.tabs-options {
+    border: 1px solid grey;
+    background-color: red;
+}
