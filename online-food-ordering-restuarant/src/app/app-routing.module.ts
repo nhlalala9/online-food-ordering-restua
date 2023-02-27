@@ -4,6 +4,9 @@ import { SignupGuard } from './guards/signup.guard';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProductsComponent } from './components/products/products.component';
+
+
 import { BookingsComponent } from './pages/bookings/bookings.component';
 
 const routes: Routes = [
@@ -13,6 +16,9 @@ const routes: Routes = [
   {
     path: 'restuarant/register',
     component: RegisterComponent,
+  },
+  {
+    path: 'restuarant/products', component:ProductsComponent
   },
   { path: 'restuarant/bookings', component: BookingsComponent },
 
