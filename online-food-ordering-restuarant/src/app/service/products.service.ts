@@ -1,32 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  apiUrl = 'http://localhost:1337';
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/my-models`);
-  }
 
-  getOne(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/my-models/${id}`);
-  }
+  // getItems() {
+  //   return this.http.get('http://localhost:1337/my-content-type');
+  // }
 
-  create(data: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/my-models`, data);
-  }
+  
+  // createItem(item) {
+  //   return this.http.post('http://localhost:1337/my-content-type', item);
+  // }
 
-  update(id: number, data: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/my-models/${id}`, data);
-  }
+  // updateItem(id, item) {
+  //   return this.http.put(`http://localhost:1337/my-content-type/${id}`, item);
+  // }
 
-  delete(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/my-models/${id}`);
-  }
+  // deleteItem(id) {
+  //   return this.http.delete(`http://localhost:1337/my-content-type/${id}`);
+  // }
+  
 }
