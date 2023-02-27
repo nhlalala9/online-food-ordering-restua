@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { DriverComponent } from './pages/driver/driver.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -31,7 +32,8 @@ import { ProductsComponent } from './pages/products/products.component';
     NavbarComponent,
     BookingsComponent,
     OrdersComponent,
-    ProductsComponent
+    ProductsComponent,
+    DriverComponent,
     // ProductsComponent,
   
   ],

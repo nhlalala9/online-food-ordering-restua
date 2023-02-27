@@ -1,53 +1,6 @@
-
-.dashboard-banner{
-  
-    width: 100%;
-    height: 300px;
-    position: relative;
-    margin-top: 6rem;
-    padding: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
+*{
+    padding-left: 0;
 }
-.dashboard-banner > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-thead tr {
-    border-bottom: 1px solid #f0f0f0;
-}
-
-td {
-    padding: .5rem 1rem;
-    font-size: 1.2rem;
-    color: #222;
-}
-
-table {
-    border-collapse: collapse;
-    border: 1px solid #f0f0f0;
-   
-}
-
-thead td {
-    font-weight: 700;
-
-}
-
-.table-responsive {
-    width: 80%;
-    margin: 5rem auto;
-}
-
-.main-content {
-    margin-left: 345px;
-    transition: margin-left 300ms;
-}
-
-
 
 header {
     display: flex;
@@ -65,6 +18,55 @@ header {
     /* height: 50px; */
 
 }
+
+.main-content {
+    margin-left: 345px;
+    transition: margin-left 300ms;
+}
+
+
+.container {
+    margin-top: 10rem;
+    max-width: 100%;
+    padding-left: 2rem !important;
+    padding-right: 1.5rem !important;
+}
+thead tr {
+    /* border-top: 1px solid #f0f0f0; */
+    border-bottom: 1px solid grey;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+thead td {
+    font-weight: 700;
+
+}
+
+td {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    color: #222;
+    /* border-top: 1px solid #f0f0f0;  */
+}
+
+td img {
+    border-radius: 50%;
+}
+
+table {
+   
+    border: 1px solid grey;
+}
+
+.add{
+    padding: 3px;
+    border-radius: .5rem;
+    width: 5rem;
+}
 #nav-toggle {
     display: none;
 }
@@ -240,28 +242,6 @@ header label span {
     padding: 0rem 1rem;
     font-size: 1.5rem;
 }
-
-.user-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.user-wrapper img {
-    border-radius: 50%;
-    margin-right: 1rem;
-    /* height: inherit; */
-}
-
-.user-wrapper h4 {
-    margin-bottom: 0rem !important;
-}
-
-.user-wrapper small {
-    display: inline-block;
-    color: gray;
-    /* margin-top: ; */
-}
-
 
 .sidebar {
     width: 345px;
@@ -270,6 +250,7 @@ header label span {
     top: 0;
     height: 100%;
     /* text-decoration: none; */
+  
     background: rgb(209, 0, 195);
     z-index: 100;
     transition: width 300ms;
@@ -513,14 +494,4 @@ header{
     }
 
    
-}
-
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    /* font-family: 'Poppins', sans-serif; */
 }

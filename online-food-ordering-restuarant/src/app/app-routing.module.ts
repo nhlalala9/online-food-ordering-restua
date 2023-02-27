@@ -4,8 +4,11 @@ import { SignupGuard } from './guards/signup.guard';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProductsComponent } from './components/products/products.component';
+
+import { DriverComponent } from './pages/driver/driver.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
-import { ProductsComponent } from './pages/products/products.component';
+import { OrdersComponent } from './pages/orders/orders.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -15,10 +18,12 @@ const routes: Routes = [
     path: 'restuarant/register',
     component: RegisterComponent,
   },
+  {
+    path: 'restuarant/products', component:ProductsComponent
+  },
   { path: 'restuarant/bookings', component: BookingsComponent },
-
-  { path: 'restuarant/products', component: ProductsComponent },
-
+  { path: 'restuarant/orders', component: OrdersComponent },
+  { path: 'restuarant/drivers', component: DriverComponent },
 ];
 
 @NgModule({
