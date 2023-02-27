@@ -42,13 +42,12 @@ thead td {
     font-weight: 700;
 
 }
-/* .image-header{
-    margin-bottom: 10px;
-} */
+
 .table-responsive {
     width: 80%;
     margin: 5rem auto;
 }
+
 .main-content {
     margin-left: 345px;
     transition: margin-left 300ms;
