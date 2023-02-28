@@ -86,7 +86,6 @@
       alt=""
     />
   </div>
-  <!-- <hr> -->
 
 
   <div class="table-responsive">
@@ -105,15 +104,15 @@
       </thead>
 
       <tbody>
-        <tr ngFor="let booking of bookings">
-          <td>{{bookings.data[0].attributes.name}}</td>
-          <td>{{bookings.data[0].attributes.date}}</td>
-          <td>{{bookings.data[0].attributes.time}}</td>
-          <td>{{bookings.data[0].attributes.email}}</td>
-          <td>{{bookings.data[0].attributes.phone}}</td>
-          <td>{{bookings.data[0].attributes.guests}}</td>
-          <td>{{bookings.data[0].attributes.message}}</td>
-          <td>{{bookings.data[0].attributes.status}}</td>
+        <tr *ngFor="let booking of bookings">
+          <td>{{booking.attributes.name}}</td>
+          <td>{{booking.attributes.date}}</td>
+          <td>{{booking.attributes.time}}</td>
+          <td>{{booking.attributes.email}}</td>
+          <td>{{booking.attributes.phone}}</td>
+          <td>{{booking.attributes.guests}}</td>
+          <td>{{booking.attributes.message}}</td>
+          <td>{{booking.attributes.status}}</td>
         </tr>
 
      
