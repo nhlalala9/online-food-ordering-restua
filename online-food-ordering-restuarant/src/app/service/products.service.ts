@@ -14,7 +14,10 @@ export class ProductsService {
     return this.http.get<any[]>(`${this.apiUrl}/api/products?populate=*`);
   }
   createProducts(product: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/api/products`, product);
+    console.log(product);
+    return this.http.post(`${this.apiUrl}/api/products`, product)
+ 
+    ;
   }
 
   updateProducts(product: any): Observable<any> {
