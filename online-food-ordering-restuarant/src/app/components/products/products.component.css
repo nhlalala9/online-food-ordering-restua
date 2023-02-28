@@ -338,7 +338,10 @@ header label span {
     text-decoration: none;
 
 }
-
+.btn{
+    display: inline-flex;
+    justify-content: space-between;
+}
 
 @media only screen and (max-width: 1200px) {
     .sidebar {
