@@ -13,6 +13,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { ProductsComponent } from './components/products/products.component';
+import { DriverComponent } from './pages/driver/driver.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -30,7 +32,8 @@ import { OrdersComponent } from './pages/orders/orders.component';
     NavbarComponent,
     BookingsComponent,
     OrdersComponent,
-   
+    ProductsComponent,
+    DriverComponent,
     // ProductsComponent,
   
   ],
