@@ -29,7 +29,8 @@ import { OrdersComponent } from './pages/orders/orders.component';
     SidebarComponent,
     NavbarComponent,
     BookingsComponent,
-    OrdersComponent
+    OrdersComponent,
+   
     // ProductsComponent,
   
   ],

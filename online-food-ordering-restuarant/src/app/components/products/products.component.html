@@ -1,95 +1,90 @@
 <input type="checkbox" id="nav-toggle">
 
 <div class="sidebar">
-  <div class="sidebar-brand">
-      <h2><span class="las la-star"></span> <span>Food</span></h2>
-  </div>
-  <div class="sidebar-menu">
-      <ul>
-          <li>
-              <a href="" class="active"><span class="las la-igloo"></span>
-              <span>DashBoard</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href=""><span class="las la-user-friends"></span>
-              <span>Customers</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href=""><span class="las la-hamburger"></span>
-              <span>Products</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href=""><span class="las la-clipboard-list"></span>
-              <span>Orders</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href=""><span class="las la-car"></span>
-              <span>Drivers</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-            <a href=""><span class="las la-book"></span>
-            <span>Bookings</span></a>
-            <!-- <i class="las la-battery-three-quarters"></i> -->
-        </li>
-          <li>
-              <a href=""><span class="las la-star-half-alt"></span>
-              <span>Reviews & Ratings</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-      </ul>
-  </div>
+    <div class="sidebar-brand">
+        <h2><span class="las la-star"></span> <span>Food</span></h2>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="" class="active"><span class="las la-igloo"></span>
+                    <span>DashBoard</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+            <li>
+                <a href=""><span class="las la-user-friends"></span>
+                    <span>Customers</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+            <li>
+                <a href=""><span class="las la-hamburger"></span>
+                    <span>Products</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+            <li>
+                <a href=""><span class="las la-clipboard-list"></span>
+                    <span>Orders</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+            <li>
+                <a href=""><span class="las la-car"></span>
+                    <span>Drivers</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+            <li>
+                <a href=""><span class="las la-book"></span>
+                    <span>Bookings</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+            <li>
+                <a href=""><span class="las la-star-half-alt"></span>
+                    <span>Reviews & Ratings</span></a>
+                <!-- <i class="las la-battery-three-quarters"></i> -->
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div class="main-content">
 
     <header>
         <h1>
-          <label for="nav-toggle">
-            <span class="las la-bars"></span>
-          </label>
+            <label for="nav-toggle">
+                <span class="las la-bars"></span>
+            </label>
         </h1>
-    
+
         <div class="search-wrapper">
-          <span class="las la-search"></span>
-          <input type="search" placeholder="search here" />
+            <span class="las la-search"></span>
+            <input type="search" placeholder="search here" />
         </div>
-    
+
         <div class="user-wrapper">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
-            width="40px"
-            height="40px"
-            alt=""
-          />
-          <div>
-            <h4>Toka</h4>
-            <small>Addmin</small>
-          </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png" width="40px" height="40px" alt="" />
+            <div>
+                <h4>Toka</h4>
+                <small>Addmin</small>
+            </div>
         </div>
-      </header>
+    </header>
 
 
 
 
-<div class="dashboard-content" ngFor="let product of products">
-    <div class="dashboard-card">
-        <img src="http://imagesolutionsphotography.co.za/wp-content/uploads/2013/04/vegetable-plate-food-photographer.jpg"
-            alt="" class="card-image">
-        <div class="card-detail">
-            <h4><span>{{products.data[0].attributes.Picture.attributes}}</span>{{products.data[0].attributes.name}}<span>{{products.data[0].attributes.price}}</span></h4>
-            <p>{{products.data[0].attributes.description}}</p>
+    <div class="dashboard-content" ngFor="let product of products">
+        <div class="dashboard-card">
+            <img src="http://imagesolutionsphotography.co.za/wp-content/uploads/2013/04/vegetable-plate-food-photographer.jpg"
+                alt="" class="card-image">
+            <div class="card-detail">
+                <h4><span>{{products.data[0].attributes.Picture.attributes}}</span>{{products.data[0].attributes.name}}<span>{{products.data[0].attributes.price}}</span>
+                </h4>
+                <p>{{products.data[0].attributes.description}}</p>
 
-            <button type="button" class="btn btn-primary">Edit</button>
-            <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+            </div>
         </div>
+
     </div>
-
-
-</div>
 
 </div>

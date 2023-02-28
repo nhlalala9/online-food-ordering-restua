@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit {
   }
 
   deleteProducts(){
-    if (confirm("Do you really want to delete this movie")) {
+    if (confirm("Do you really want to delete this product")) {
       this.http
         .delete("http://localhost:1337api/products/")
         .subscribe((data) => {
