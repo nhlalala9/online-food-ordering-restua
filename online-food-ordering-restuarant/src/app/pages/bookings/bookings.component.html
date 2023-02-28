@@ -7,32 +7,32 @@
   <div class="sidebar-menu">
       <ul>
           <li>
-              <a href="" class="active"><span class="las la-igloo"></span>
+              <a href="restuarant/dashboard" class="active"><span class="las la-igloo"></span>
               <span>DashBoard</span></a>
               <!-- <i class="las la-battery-three-quarters"></i> -->
           </li>
           <li>
-              <a href=""><span class="las la-user-friends"></span>
+              <a href="restuarant/customers"><span class="las la-user-friends"></span>
               <span>Customers</span></a>
               <!-- <i class="las la-battery-three-quarters"></i> -->
           </li>
           <li>
-              <a href=""><span class="las la-hamburger"></span>
+              <a href="restuarant/products"><span class="las la-hamburger"></span>
               <span>Products</span></a>
               <!-- <i class="las la-battery-three-quarters"></i> -->
           </li>
           <li>
-              <a href=""><span class="las la-clipboard-list"></span>
+              <a href="/restuarant/orders"><span class="las la-clipboard-list"></span>
               <span>Orders</span></a>
               <!-- <i class="las la-battery-three-quarters"></i> -->
           </li>
           <li>
-              <a href=""><span class="las la-car"></span>
+              <a href="restuarant/drivers"><span class="las la-car"></span>
               <span>Drivers</span></a>
               <!-- <i class="las la-battery-three-quarters"></i> -->
           </li>
           <li>
-            <a href=""><span class="las la-book"></span>
+            <a href="/restuarant/bookings"><span class="las la-book"></span>
             <span>Bookings</span></a>
             <!-- <i class="las la-battery-three-quarters"></i> -->
         </li>
@@ -94,45 +94,29 @@
       <thead>
         <tr>
           <td>Name</td>
-          <td>Time</td>
           <td>Date</td>
+          <td>Time</td>
+          <td>Email</td>
+          <td>Phone</td>
           <td>No of guests</td>
+          <td>Message</td>
           <td>Status</td>
         </tr>
       </thead>
 
       <tbody>
-        <tr>
-          <td>Oratile</td>
-          <td>12:00</td>
-          <td>25/02/2023</td>
-          <td>2</td>
-          <td>Pending</td>
+        <tr ngFor="let booking of bookings">
+          <td>{{bookings.data[0].attributes.name}}</td>
+          <td>{{bookings.data[0].attributes.date}}</td>
+          <td>{{bookings.data[0].attributes.time}}</td>
+          <td>{{bookings.data[0].attributes.email}}</td>
+          <td>{{bookings.data[0].attributes.phone}}</td>
+          <td>{{bookings.data[0].attributes.guests}}</td>
+          <td>{{bookings.data[0].attributes.message}}</td>
+          <td>{{bookings.data[0].attributes.status}}</td>
         </tr>
 
-        <tr>
-          <td>Oratile</td>
-          <td>12:00</td>
-          <td>25/02/2023</td>
-          <td>2</td>
-          <td>Pending</td>
-        </tr>
-
-        <tr>
-          <td>Oratile</td>
-          <td>12:00</td>
-          <td>25/02/2023</td>
-          <td>2</td>
-          <td>Pending</td>
-        </tr>
-
-        <tr>
-          <td>Oratile</td>
-          <td>12:00</td>
-          <td>25/02/2023</td>
-          <td>2</td>
-          <td>Pending</td>
-        </tr>
+     
       </tbody>
     </table>
   </div>

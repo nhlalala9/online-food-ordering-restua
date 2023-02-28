@@ -15,6 +15,7 @@ import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DriverComponent } from './pages/driver/driver.component';
+import { CustomerComponent } from './pages/customer/customer.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -34,6 +35,7 @@ import { DriverComponent } from './pages/driver/driver.component';
     OrdersComponent,
     ProductsComponent,
     DriverComponent,
+    CustomerComponent,
     // ProductsComponent,
   
   ],

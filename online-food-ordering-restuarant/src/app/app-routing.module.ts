@@ -5,7 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductsComponent } from './components/products/products.component';
-
+import { CustomerComponent } from './pages/customer/customer.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'restuarant/bookings', component: BookingsComponent },
   { path: 'restuarant/orders', component: OrdersComponent },
   { path: 'restuarant/drivers', component: DriverComponent },
+  { path: 'restuarant/customers', component: CustomerComponent },
 ];
 
 @NgModule({
