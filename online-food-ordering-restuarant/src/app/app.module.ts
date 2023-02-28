@@ -16,6 +16,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { CustomerComponent } from './pages/customer/customer.component';
+import { LoaderComponent } from './components/loader/loader.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -36,6 +37,7 @@ import { CustomerComponent } from './pages/customer/customer.component';
     ProductsComponent,
     DriverComponent,
     CustomerComponent,
+    LoaderComponent,
     // ProductsComponent,
   
   ],

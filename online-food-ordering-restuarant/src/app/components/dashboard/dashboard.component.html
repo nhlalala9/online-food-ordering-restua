@@ -1,46 +1,49 @@
+<app-loader *ngIf="isLoading"></app-loader>
 <input type="checkbox" id="nav-toggle">
 
 <div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><span class="las la-star"></span> <span>Food</span></h2>
-    </div>
-    <div class="sidebar-menu">
-        <ul>
-            <li>
-                <a href="" class="active"><span class="las la-igloo"></span>
-                <span>DashBoard</span></a>
-                <!-- <i class="las la-battery-three-quarters"></i> -->
-            </li>
-            <li>
-                <a href=""><span class="las la-user-friends"></span>
-                <span>Customers</span></a>
-                <!-- <i class="las la-battery-three-quarters"></i> -->
-            </li>
-            <li>
-                <a href=""><span class="las la-hamburger"></span>
-                <span [routerLink]="['/restuarant/products']">Products</span></a>
-                <!-- <i class="las la-battery-three-quarters"></i> -->
-            </li>
-            <li>
-                <a href=""><span class="las la-clipboard-list"></span>
-                <span>Orders</span></a>
-                <!-- <i class="las la-battery-three-quarters"></i> -->
-            </li>
-            <li>
-                <a href=""><span class="las la-car"></span>
-                <span>Drivers</span></a>
-                <!-- <i class="las la-battery-three-quarters"></i> -->
-            </li>
-            <li>
-                <a href=""><span class="las la-star-half-alt"></span>
-                <span>Reviews & Ratings</span></a>
-                <!-- <i class="las la-battery-three-quarters"></i> -->
-            </li>
-        </ul>
-
-       
-    </div>
-    
+  <div class="sidebar-brand">
+      <h2><span class="las la-star"></span> <span>Food</span></h2>
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+        <li>
+            <a href="restuarant/dashboard" class="active"><span class="las la-igloo"></span>
+            <span>DashBoard</span></a>
+            <!-- <i class="las la-battery-three-quarters"></i> -->
+        </li>
+        <li>
+            <a href="restuarant/customers"><span class="las la-user-friends"></span>
+            <span>Customers</span></a>
+            <!-- <i class="las la-battery-three-quarters"></i> -->
+        </li>
+        <li>
+            <a href="restuarant/products"><span class="las la-hamburger"></span>
+            <span>Products</span></a>
+            <!-- <i class="las la-battery-three-quarters"></i> -->
+        </li>
+        <li>
+            <a href="/restuarant/orders"><span class="las la-clipboard-list"></span>
+            <span>Orders</span></a>
+            <!-- <i class="las la-battery-three-quarters"></i> -->
+        </li>
+        <li>
+            <a href="restuarant/drivers"><span class="las la-car"></span>
+            <span>Drivers</span></a>
+            <!-- <i class="las la-battery-three-quarters"></i> -->
+        </li>
+        <li>
+          <a href="/restuarant/bookings"><span class="las la-book"></span>
+          <span>Bookings</span></a>
+          <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+        <li>
+            <a href=""><span class="las la-star-half-alt"></span>
+            <span>Reviews & Ratings</span></a>
+            <!-- <i class="las la-battery-three-quarters"></i> -->
+        </li>
+    </ul>
+</div>
 </div>
 
 
@@ -74,6 +77,9 @@
   </header>
 
   <main>
+    <app-loader *ngIf="isLoading"></app-loader>
+
+
     <div class="cards">
       <div class="cards-single">
         <div>
@@ -97,7 +103,7 @@
 
       <div class="cards-single">
         <div>
-          <h1>54</h1>
+          <h1>{{product.length}}</h1>
           <span>Products</span>
         </div>
         <div>
@@ -122,7 +128,7 @@
           <div class="card-header">
             <h2>Recent Orders</h2>
 
-            <button>See all<span class="las la-arrow-right"></span></button>
+            <button routerLink="/restuarant/orders">See all<span class="las la-arrow-right"></span></button>
           </div>
 
           <div class="card-body">
@@ -201,7 +207,7 @@
         <div class="card">
           <div class="card-header">
             <h3>Drivers</h3>
-            <button>See all <span class="las la-arrow-right"></span></button>
+            <button routerLink="/restuarant/drivers">See all <span class="las la-arrow-right"></span></button>
           </div>
 
           <div class="card-body">
