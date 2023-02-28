@@ -49,29 +49,24 @@
 
     <header>
         <h1>
-          <label for="nav-toggle">
-            <span class="las la-bars"></span>
-          </label>
+            <label for="nav-toggle">
+                <span class="las la-bars"></span>
+            </label>
         </h1>
-    
+
         <div class="search-wrapper">
-          <span class="las la-search"></span>
-          <input type="search" placeholder="search here" />
+            <span class="las la-search"></span>
+            <input type="search" placeholder="search here" />
         </div>
-    
+
         <div class="user-wrapper">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
-            width="40px"
-            height="40px"
-            alt=""
-          />
-          <div>
-            <h4>Toka</h4>
-            <small>Addmin</small>
-          </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png" width="40px" height="40px" alt="" />
+            <div>
+                <h4>Toka</h4>
+                <small>Addmin</small>
+            </div>
         </div>
-      </header>
+    </header>
 
 
 
@@ -84,12 +79,11 @@
             <h4><span>{{products.data[0].attributes.Picture.attributes}}</span>{{products.data[0].attributes.name}}<span>{{products.data[0].attributes.price}}</span></h4>
             <p>{{products.data[0].attributes.description}}</p>
 
-            <button type="button" class="btn btn-primary">Edit</button>
-            <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+            </div>
         </div>
+
     </div>
-
-
-</div>
 
 </div>
