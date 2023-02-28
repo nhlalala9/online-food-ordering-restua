@@ -29,12 +29,12 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fbuilder.group({
-      full_name: ['', Validators.required],
-      email: ['', Validators.required],
-      cell_phone: ['', Validators.required],
-      company: ['', Validators.required],
-      photoUrl: ['', Validators.required],
-      title: ['', Validators.required],
+      name: ['', Validators.required],
+      price: ['', Validators.required],
+      description: ['', Validators.required],
+      // company: ['', Validators.required],
+      // photoUrl: ['', Validators.required],
+      // title: ['', Validators.required],
     });
 
     // this.getList();
@@ -49,12 +49,10 @@ export class AddProductComponent implements OnInit {
   onSubmit() {
 
     this.serve = {
-      full_name: this.form.value.full_name,
-      email: this.form.value.email,
-      cell_phone: this.form.value.cell_phone,
-      company: this.form.value.company,
-      title: this.form.value.title,
-      photoUrl: this.form.value.photoUrl,
+      name: this.form.value.name,
+      price: this.form.value.price,
+      description: this.form.value.description,
+
     };
     console.log(this.serve),"why";
 

@@ -39,24 +39,24 @@
         <div class="col-sm-4">
             <form [formGroup]="form">
                 <div class="mb-2">
-                    <input class="form-control" placeholder="full_name" type="text" formControlName="full_name">
+                    <input class="form-control" placeholder="full_name" type="text" formControlName="name">
                 </div>
                 <div class="mb-2">
-                    <input class="form-control" placeholder="email" type="text" formControlName="email">
+                    <input class="form-control" placeholder="email" type="text" formControlName="price">
                 </div>
-                <div class="mb-2">
+                <!-- <div class="mb-2">
                     <input class="form-control" min="0" start="1" placeholder="mobile" type="number"
                         formControlName="cell_phone">
-                </div>
+                </div> -->
                 <div class="mb-2">
-                    <input class="form-control" placeholder="Company" type="text" formControlName="company">
+                    <input class="form-control" placeholder="Company" type="text" formControlName="description">
                 </div>
-                <div class="mb-2">
+                <!-- <div class="mb-2">
                     <input class="form-control" placeholder="Title" type="text" formControlName="title">
-                </div>
-                <div class="mb-2">
+                </div> -->
+                <!-- <div class="mb-2">
                     <input class="form-control" placeholder="Photo url" type="text" formControlName="photoUrl">
-                </div>
+                </div> -->
                 <div class="mb-2">
                     <input class="btn btn-danger" type="Submit" value="Create" (click)="onSubmit()">
                     <!-- <button (click)="save()" class="btn btn-dark" style="background-color:#011345">Save</button> -->
