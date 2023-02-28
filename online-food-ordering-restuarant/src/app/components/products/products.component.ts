@@ -15,9 +15,11 @@ export class ProductsComponent implements OnInit {
   constructor(private http:HttpClient, private ProductsService:ProductsService ) { }
 
   ngOnInit(): void {
-    this.ProductsService.getProducts().subscribe((products: any[]) =>{
+    this.ProductsService.getProducts().subscribe((products: any) =>{
       this.products = products;
-      console.log(products,"oiuy")
+      this.products = this.products.data
+      console.log(this.products,"oiuy")
+
     })
     
   }
