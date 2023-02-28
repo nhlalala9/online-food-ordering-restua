@@ -9,6 +9,7 @@ import { CustomerComponent } from './pages/customer/customer.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -28,7 +29,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), BrowserModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
