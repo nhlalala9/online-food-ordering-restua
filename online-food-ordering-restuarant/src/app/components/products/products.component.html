@@ -70,65 +70,14 @@
 
 
 
-<<<<<<< HEAD
-<!-- <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-secondary">Delete</button> -->
-<div class="dashboard-content">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Product Name" aria-label="First name">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Price" aria-label="Last name">
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
-=======
-
-<<<<<<< HEAD
-    <div class="dashboard-content" ngFor="let product of products">
-        <div class="dashboard-card">
-            <img src="http://imagesolutionsphotography.co.za/wp-content/uploads/2013/04/vegetable-plate-food-photographer.jpg"
-                alt="" class="card-image">
-            <div class="card-detail">
-                <h4><span>{{products.data[0].attributes.Picture.attributes}}</span>{{products.data[0].attributes.name}}<span>{{products.data[0].attributes.price}}</span>
-                </h4>
-                <p>{{products.data[0].attributes.description}}</p>
-=======
 <div class="dashboard-content" ngFor="let product of products">
->>>>>>> 68b06fb0d9128175056eaedc1b9268bc093ea9a5
     <div class="dashboard-card">
         <img src="http://imagesolutionsphotography.co.za/wp-content/uploads/2013/04/vegetable-plate-food-photographer.jpg"
             alt="" class="card-image">
         <div class="card-detail">
             <h4><span>{{products.data[0].attributes.Picture.attributes}}</span>{{products.data[0].attributes.name}}<span>{{products.data[0].attributes.price}}</span></h4>
             <p>{{products.data[0].attributes.description}}</p>
->>>>>>> a8769945bab862dc2b431330fd4b891e9d44a86c
 
                 <button type="button" class="btn btn-primary">Edit</button>
                 <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
