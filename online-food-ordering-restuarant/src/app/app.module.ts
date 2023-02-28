@@ -17,6 +17,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -38,6 +39,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     DriverComponent,
     CustomerComponent,
     LoaderComponent,
+    AddProductComponent,
     // ProductsComponent,
   
   ],

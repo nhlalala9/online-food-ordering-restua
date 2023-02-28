@@ -1,0 +1,71 @@
+<!-- <form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Name</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Price</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>      
+    </div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Select Picture</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" class="btn btn-primary">Cancel</button>
+    </div>
+  </form> -->
+
+
+
+  <div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 fw-bold text-white"> Add Contact </p>
+            <p class="fst-italic">“Don’t be scared of anything; instead dare to face the difficulty, you will definitely
+                win the race and if not, try again and again, even then it seems difficult, just change the track. All
+                the very best for your life.”</p>
+        </div>
+    </div>
+</div>
+<!--create Contact form-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form [formGroup]="form">
+                <div class="mb-2">
+                    <input class="form-control" placeholder="full_name" type="text" formControlName="full_name">
+                </div>
+                <div class="mb-2">
+                    <input class="form-control" placeholder="email" type="text" formControlName="email">
+                </div>
+                <div class="mb-2">
+                    <input class="form-control" min="0" start="1" placeholder="mobile" type="number"
+                        formControlName="cell_phone">
+                </div>
+                <div class="mb-2">
+                    <input class="form-control" placeholder="Company" type="text" formControlName="company">
+                </div>
+                <div class="mb-2">
+                    <input class="form-control" placeholder="Title" type="text" formControlName="title">
+                </div>
+                <div class="mb-2">
+                    <input class="form-control" placeholder="Photo url" type="text" formControlName="photoUrl">
+                </div>
+                <div class="mb-2">
+                    <input class="btn btn-danger" type="Submit" value="Create" (click)="onSubmit()">
+                    <!-- <button (click)="save()" class="btn btn-dark" style="background-color:#011345">Save</button> -->
+                    <a class="btn btn-dark ms-2" routerLink="/">Close</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <img src="../../../assets/image/images.png">
+        </div>
+    </div>
+</div>
