@@ -13,11 +13,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
-
-import { RouterModule } from '@angular/router';
-import { DriverComponent } from './pages/driver/driver.component';
-import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './components/products/products.component';
+import { DriverComponent } from './pages/driver/driver.component';
+import { CustomerComponent } from './pages/customer/customer.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -37,16 +35,17 @@ import { ProductsComponent } from './components/products/products.component';
     OrdersComponent,
     ProductsComponent,
     DriverComponent,
-  
+    CustomerComponent,
+    // ProductsComponent,
   
   ],
   imports: [
     BrowserModule,
-    RouterModule,
+    // RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule,
+    // CommonModule,
 
     FormsModule
   ],

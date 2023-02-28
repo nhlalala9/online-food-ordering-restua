@@ -39,6 +39,7 @@ thead tr {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
+    margin-top: 15px;
 }
 
 thead td {

@@ -16,16 +16,14 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.ProductsService.getProducts().subscribe((products: any) =>{
-      this.products = products;
-      this.products = this.products.data
-      console.log(this.products,"oiuy")
-
+      this.products = products.data;
+      console.log(products.data)
     })
     
   }
 
   deleteProducts(){
-    if (confirm("Do you really want to delete this movie")) {
+    if (confirm("Do you really want to delete this product")) {
       this.http
         .delete("http://localhost:1337api/products/")
         .subscribe((data) => {
