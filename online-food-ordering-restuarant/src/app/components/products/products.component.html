@@ -90,15 +90,20 @@
     </div>
   </header>
 
-    <div class="dashboard-content" *ngFor="let product of products">
-        <div class="dashboard-card">
+  <div>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  </div>
+  <div class="row">
+    <div  class="d-flex justify-content-center dashboard" *ngFor="let product of products">
+        <div class="dashboard-card" style="width: 18rem;">
 
             <img [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
             src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
                 alt="" class="card-image">
             <div class="card-detail">
-                <h4>{{product?.attributes?.name}}<span>{{product?.attributes?.price}}</span>
+                <h4>{{product?.attributes?.name}}
                 </h4>
+                <span>{{product?.attributes?.price}}</span>
                 <p>{{product?.attributes?.description}}</p>
 
                 <button type="button" class="btn btn-primary">Edit</button>
@@ -107,5 +112,6 @@
         </div>
 
     </div>
+</div>
 
 </div>
