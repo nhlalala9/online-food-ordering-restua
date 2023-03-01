@@ -18,6 +18,29 @@
     padding-right: 1.5rem !important;
 }
 
+.log{
+    margin-bottom: 100%;
+    margin-top: 120%;
+}
+.log a{
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+   
+
+}
+.log li{
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+.log li a{
+    text-decoration: none;
+}
+
+
 .order-tab .nav-tabs .nav-link {
     border: 0;
     border-radius: 0;
@@ -298,7 +321,7 @@ header label span {
     height: 100%;
     /* text-decoration: none; */
   
-    background: rgb(209, 0, 195);
+    background:blue;
     z-index: 100;
     transition: width 300ms;
 }

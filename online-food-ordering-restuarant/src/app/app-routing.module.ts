@@ -9,6 +9,9 @@ import { CustomerComponent } from './pages/customer/customer.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { BookingsComponent } from './pages/bookings/bookings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AddProductComponent } from './pages/add-product/add-product.component';
+import { EditProductComponent } from './pages/edit-product/edit-product.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -25,10 +28,13 @@ const routes: Routes = [
   { path: 'restuarant/orders', component: OrdersComponent },
   { path: 'restuarant/drivers', component: DriverComponent },
   { path: 'restuarant/customers', component: CustomerComponent },
+  { path: 'restuarant/add', component: AddProductComponent },
+  { path: 'restuarant/edit/:id', component: EditProductComponent },
+  
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), BrowserModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

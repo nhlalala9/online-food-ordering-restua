@@ -1,10 +1,10 @@
-<input type="checkbox" id="nav-toggle">
+<input type="checkbox" id="nav-toggle" />
 
 <div class="sidebar">
-  <div class="sidebar-brand">
-      <h2><span class="las la-star"></span> <span>Food</span></h2>
-  </div>
-  <div class="sidebar-menu">
+    <div class="sidebar-brand">
+        <h2><span class="las la-star"></span> <span>Food</span></h2>
+    </div>
+    <div class="sidebar-menu">
       <ul>
           <li>
               <a href="restuarant/dashboard" class="active"><span class="las la-igloo"></span>
@@ -36,6 +36,9 @@
             <span>Bookings</span></a>
             <!-- <i class="las la-battery-three-quarters"></i> -->
         </li>
+        <div>
+          
+        </div>
           <li>
               <a href=""><span class="las la-star-half-alt"></span>
               <span>Reviews & Ratings</span></a>
@@ -43,9 +46,24 @@
           </li>
       </ul>
   </div>
+  <div class="log">
+    <li>
+      <a href=""><span  class="las la-arrow-left"></span>
+      <span>Logout</span></a>
+    </li>
+  </div>
+ 
 </div>
 
+
+
 <div class="main-content">
+  <header>
+    <h1>
+      <label for="nav-toggle">
+        <span class="las la-bars"></span>
+      </label>
+    </h1>
 
     <header>
         <h1>
@@ -70,20 +88,46 @@
 
 
 
+    <div class="user-wrapper">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
+        width="40px"
+        height="40px"
+        alt=""
+      />
+      <div>
+        <h4>Toka</h4>
+        <small>Addmin</small>
+      </div>
+    </div>
+  </header>
 
-<div class="dashboard-content" ngFor="let product of products">
-    <div class="dashboard-card">
-        <img src="http://imagesolutionsphotography.co.za/wp-content/uploads/2013/04/vegetable-plate-food-photographer.jpg"
-            alt="" class="card-image">
-        <div class="card-detail">
-            <h4><span>{{products.data[0].attributes.Picture.attributes}}</span>{{products.data[0].attributes.name}}<span>{{products.data[0].attributes.price}}</span></h4>
-            <p>{{products.data[0].attributes.description}}</p>
+  <div class="mt-6">
+    <button   type="button" class="why btn btn-success"><a href="restuarant/add"><i class="las la-plus-circle"></i> Add Product</a></button>
+</div>
+  <div class="row">
 
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+    <div  class="d-flex justify-content-center dashboard" *ngFor="let product of products">
+        <div class="dashboard-card" style="width: 18rem;">
+
+            <img [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
+            src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
+                alt="" class="card-image">
+            <div class="card-detail">
+                <h4>{{product?.attributes?.name}}
+                </h4>
+                <span>{{product?.attributes?.price}}</span>
+                <p>{{product?.attributes?.description}}</p>
+                
             </div>
+            <div class="d-flex justify-content-between ml-2 mr-2 mb-2">
+                <a routerLink="/restuarant/edit/{{product.id}}">kjnkrntjvt</a>
+                <button type="button" class="wh btn btn-primary"><i class="las la-pen"></i> Edit</button>
+                <button type="button" class="wh btn btn-danger" (click)="deleteProducts(product.id)"><i class="las la-trash"></i> Delete</button>
+                </div>
         </div>
 
     </div>
-
 </div>
+
+
