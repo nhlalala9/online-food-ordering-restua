@@ -10,7 +10,7 @@ export class BookingsService {
 
   constructor(private http: HttpClient) { }
 
-  getBookings(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/api/bookings`);
+  getBookings(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/api/bookings`);
   }
 }

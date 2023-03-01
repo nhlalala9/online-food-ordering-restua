@@ -1,3 +1,4 @@
+
 <input type="checkbox" id="nav-toggle" />
 
 <div class="sidebar">
@@ -84,7 +85,7 @@
   <div class="toka mt-3">
     <div class="row">
       <div class="col">
-        <p class="h3 fw-bold text-black">Add Product</p>
+        <p class="h3 fw-bold text-black">Edit Product</p>
         <p class="fst-italic mb-4">
           “Truly, love is delightful and pleasant food, supplying, as it
           does,<br />
@@ -102,7 +103,8 @@
           <div class="mb-2">
             <input
               class="form-control pl-2"
-              placeholder="Name of Product"
+              placeholder="{{product?.attributes?.name}}"
+              value={{product?.attributes?.name}}
               type="text"
               formControlName="name"
             />
@@ -110,7 +112,8 @@
           <div class="mb-2">
             <input
               class="form-control pl-2"
-              placeholder="Price"
+              placeholder="{{product?.attributes?.price}}"
+              value={{product?.attributes?.price}}
               type="number"
               formControlName="price"
             />
@@ -118,7 +121,9 @@
           <div class="mb-2">
             <textarea
               class="form-control pl-2"
-              placeholder="Description"
+              placeholder={{product?.attributes?.description}}
+              value={{product?.attributes?.description}}
+              defaultValue={{product?.attributes?.description}}
               type="text"
               formControlName="description"
             ></textarea>
@@ -132,11 +137,11 @@
             <input
               class="btn btn-primary pl-2"
               type="Submit"
-              value="Create"
+              value="Save"
               (click)="onSubmit()"
             />
             <!-- <button (click)="save()" class="btn btn-dark" style="background-color:#011345">Save</button> -->
-            <a class="btn btn-dark ms-2 pl-2" routerLink="/">Close</a>
+            <a class="btn btn-dark ms-2 pl-2" routerLink="/">Save</a>
           </div>
         </form>
       </div>
