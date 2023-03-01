@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/service/products.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,10 +10,10 @@ import { ProductsService } from 'src/app/service/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  router: any;
+
   products: any;
 
-  constructor(private http:HttpClient, private ProductsService:ProductsService ) { }
+  constructor(private http:HttpClient, private ProductsService:ProductsService, private router: Router ) { }
 
   ngOnInit(): void {
     this.ProductsService.getProducts().subscribe((products: any) =>{
@@ -32,8 +33,16 @@ export class ProductsComponent implements OnInit {
     }
   }
 
+ 
+
 }
+
+
+
+
 function products(products: any) {
   throw new Error('Function not implemented.');
 }
+
+
 
