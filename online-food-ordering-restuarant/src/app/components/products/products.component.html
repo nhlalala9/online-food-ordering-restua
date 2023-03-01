@@ -90,22 +90,30 @@
     </div>
   </header>
 
-    <div class="dashboard-content" *ngFor="let product of products">
-        <div class="dashboard-card">
+  <div class="mt-6">
+    <button   type="button" class="why btn btn-secondary"><a href="restuarant/add"><i class="las la-plus-circle"></i> Add Product</a></button>
+</div>
+  <div class="row">
+
+    <div  class="d-flex justify-content-center dashboard" *ngFor="let product of products">
+        <div class="dashboard-card" style="width: 18rem;">
 
             <img [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
             src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
                 alt="" class="card-image">
             <div class="card-detail">
-                <h4>{{product?.attributes?.name}}<span>{{product?.attributes?.price}}</span>
+                <h4>{{product?.attributes?.name}}
                 </h4>
+                <span>{{product?.attributes?.price}}</span>
                 <p>{{product?.attributes?.description}}</p>
-
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+                <div class="d-flex justify-content-between">
+                <button type="button" class="wh btn btn-primary"><i class="las la-pen"></i> Edit</button>
+                <button type="button" class="wh btn btn-danger" (click)="deleteProducts()"><i class="las la-trash"></i> Delete</button>
+                </div>
             </div>
         </div>
 
     </div>
+</div>
 
 </div>
