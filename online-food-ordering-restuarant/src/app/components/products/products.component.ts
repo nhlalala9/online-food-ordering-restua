@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
   deleteProducts(){
     if (confirm("Do you really want to delete this product")) {
       this.http
-        .delete("http://localhost:1337api/products/")
+        .delete("http://localhost:1337/api/products/")
         .subscribe((data) => {
           this.router.navigate(["/"]);
         });

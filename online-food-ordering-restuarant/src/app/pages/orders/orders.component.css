@@ -21,6 +21,29 @@
   
 }
 
+.log{
+    margin-bottom: 100%;
+    margin-top: 120%;
+}
+.log a{
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+   
+
+}
+.log li{
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+.log li a{
+    text-decoration: none;
+}
+
+
 .order-tab .nav-tabs .nav-link {
     border: 0;
     border-radius: 0;
