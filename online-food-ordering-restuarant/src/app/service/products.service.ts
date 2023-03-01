@@ -19,10 +19,17 @@ export class ProductsService {
  
     ;
   }
+  getById(id: any): Observable<any> {
+    const url = `${this.apiUrl}/api/products/${id}?populate=*`;
+    return this.http.get<any>(url);
+  }
+
+
 
   updateProducts(product: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/api/products/${product.id}`, product);
+    return this.http.put<any>(`${this.apiUrl}/api/products/${product.id}`, {data:product});
   }
+  
 
   deleteProducts(productId: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/api/products/${productId}`);
