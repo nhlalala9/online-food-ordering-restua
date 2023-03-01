@@ -13,9 +13,9 @@ bookings: any;
   constructor(private http:HttpClient, private BookingsService:BookingsService) { }
 
   ngOnInit(): void {
-    this.BookingsService.getBookings().subscribe((data: any) =>{
-      this.bookings = data as [];
-      console.log(data,"all bookings")
+    this.BookingsService.getBookings().subscribe((bookings: any) =>{
+      this.bookings = bookings.data;
+      console.log(bookings.data)
     })
   }
 
