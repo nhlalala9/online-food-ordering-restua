@@ -29,7 +29,8 @@ export class AddProductComponent implements OnInit {
     this.form = this.fbuilder.group({
       name: ['', Validators.required],
       price: [, Validators.required],
-      description: ['', Validators.required]
+      description: ['', Validators.required],
+      picture: ['', Validators.required]
     });
 
     // this.getList();
@@ -48,6 +49,7 @@ export class AddProductComponent implements OnInit {
       name: this.form.value.name,
       price: this.form.value.price,
       description: this.form.value.description,
+      picture: this.form.value.picture,
       }
     };
     console.log(this.serve),"why";
