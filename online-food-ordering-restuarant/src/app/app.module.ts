@@ -19,6 +19,7 @@ import { CustomerComponent } from './pages/customer/customer.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { EditProductComponent } from './pages/edit-product/edit-product.component';
+import { ReviewsComponent } from './pages/reviews/reviews.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
 
@@ -42,6 +43,7 @@ import { EditProductComponent } from './pages/edit-product/edit-product.componen
     LoaderComponent,
     AddProductComponent,
     EditProductComponent,
+    ReviewsComponent,
     // ProductsComponent,
   
   ],
