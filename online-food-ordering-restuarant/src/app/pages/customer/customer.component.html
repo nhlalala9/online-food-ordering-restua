@@ -1,4 +1,4 @@
-<input type="checkbox" id="nav-toggle" />
+<input type="checkbox" id="nav-toggle">
 
 <div class="sidebar">
     <div class="sidebar-brand">
@@ -43,9 +43,10 @@
           </li>
       </ul>
   </div>
-</div>
+  </div>
 
 <div class="main-content">
+ 
   <header>
     <h1>
       <label for="nav-toggle">
@@ -53,28 +54,10 @@
       </label>
     </h1>
 
-    <header>
-        <h1>
-            <label for="nav-toggle">
-                <span class="las la-bars"></span>
-            </label>
-        </h1>
-
-        <div class="search-wrapper">
-            <span class="las la-search"></span>
-            <input type="search" placeholder="search here" />
-        </div>
-
-        <div class="user-wrapper">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png" width="40px" height="40px" alt="" />
-            <div>
-                <h4>Toka</h4>
-                <small>Addmin</small>
-            </div>
-        </div>
-    </header>
-
-
+    <div class="search-wrapper">
+      <span class="las la-search"></span>
+      <input type="search" placeholder="search here" />
+    </div>
 
     <div class="user-wrapper">
       <img
@@ -90,20 +73,60 @@
     </div>
   </header>
 
-    <div class="dashboard-content" *ngFor="let product of products">
-        <div class="dashboard-card">
-            <img [src]="product.attributes.Picture.data.attributes.url"
-                alt="" class="card-image">
-            <div class="card-detail">
-                <h4>{{product.attributes.name}}<span>{{product.attributes.price}}</span>
-                </h4>
-                <p>{{product.attributes.description}}</p>
+  <div class="container">
+      <h4> Customers</h4>
+      <div class="add-btn">
+           <button class="add" >Add new</button>
+      </div>
+     
+      <div class="card-body">
+        <div class="table-responsive">
+        <table width="100%">
+          <thead>
+            <tr>
+              <td></td>
+              <td>Name</td>
+              <td>Address</td>
+              <td>Phone</td>
+              <td>Email</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="https://i.pinimg.com/originals/4a/7c/2b/4a7c2b3e29cd998ca1e07d685995b888.jpg"
+                  width="40px"
+                  height="40px"
+                  alt=""
+                />
+              </td>
+              <td>Oratile Mabote</td>
+              <td>61 Collins, Brixton</td>
+              <td>0724567891</td>
+              <td>ora@gmail.com</td>
+            </tr>
 
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
-            </div>
-        </div>
-
+            <tr>
+                <td>
+                  <img
+                    src="https://i.pinimg.com/originals/4a/7c/2b/4a7c2b3e29cd998ca1e07d685995b888.jpg"
+                    width="40px"
+                    height="40px"
+                    alt=""
+                  />
+                </td>
+                <td>Oratile Mabote</td>
+                <td>61 Collins, Brixton</td>
+                <td>0724567891</td>
+                <td>ora@gmail.com</td>
+              </tr>
+         
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 
-</div>
+  </div>
+

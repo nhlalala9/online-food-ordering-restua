@@ -15,15 +15,15 @@ export class ProductsComponent implements OnInit {
   constructor(private http:HttpClient, private ProductsService:ProductsService ) { }
 
   ngOnInit(): void {
-    this.ProductsService.getProducts().subscribe((products: any[]) =>{
-      this.products = products;
-      console.log(products,"oiuy")
+    this.ProductsService.getProducts().subscribe((products: any) =>{
+      this.products = products.data;
+      console.log(products.data)
     })
     
   }
 
   deleteProducts(){
-    if (confirm("Do you really want to delete this movie")) {
+    if (confirm("Do you really want to delete this product")) {
       this.http
         .delete("http://localhost:1337api/products/")
         .subscribe((data) => {

@@ -1,3 +1,8 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+
 *{
     padding-left: 0;
 }
@@ -15,7 +20,7 @@ header {
     transition: left 300ms;
     background: #fff;
     /* transition: left 300ms; */
-    /* height: 50px; */
+    height: 50px;
 
 }
 
@@ -39,6 +44,7 @@ thead tr {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
+    margin-top: 15px;
 }
 
 thead td {
