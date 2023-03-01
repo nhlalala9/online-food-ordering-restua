@@ -92,12 +92,14 @@
 
     <div class="dashboard-content" *ngFor="let product of products">
         <div class="dashboard-card">
-            <img [src]="product.attributes.Picture.data.attributes.url"
+
+            <img [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
+            src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
                 alt="" class="card-image">
             <div class="card-detail">
-                <h4>{{product.attributes.name}}<span>{{product.attributes.price}}</span>
+                <h4>{{product?.attributes?.name}}<span>{{product?.attributes?.price}}</span>
                 </h4>
-                <p>{{product.attributes.description}}</p>
+                <p>{{product?.attributes?.description}}</p>
 
                 <button type="button" class="btn btn-primary">Edit</button>
                 <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>

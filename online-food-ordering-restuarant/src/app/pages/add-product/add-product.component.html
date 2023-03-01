@@ -1,71 +1,152 @@
-<!-- <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Name</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Price</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-12">
-        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>      
-    </div>
-    <div class="mb-3">
-        <label for="formFile" class="form-label">Select Picture</label>
-        <input class="form-control" type="file" id="formFile">
-      </div>
-    <div>
-      <button type="submit" class="btn btn-primary">Save</button>
-      <button type="submit" class="btn btn-primary">Cancel</button>
-    </div>
-  </form> -->
+<input type="checkbox" id="nav-toggle" />
 
-
-
-  <div class="container mt-3">
-    <div class="row">
-        <div class="col">
-            <p class="h3 fw-bold text-white"> Add Contact </p>
-            <p class="fst-italic">“Don’t be scared of anything; instead dare to face the difficulty, you will definitely
-                win the race and if not, try again and again, even then it seems difficult, just change the track. All
-                the very best for your life.”</p>
-        </div>
-    </div>
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <h2><span class="las la-star"></span> <span>Food</span></h2>
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <a href="restuarant/dashboard" class="active"
+          ><span class="las la-igloo"></span> <span>DashBoard</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="restuarant/customers"
+          ><span class="las la-user-friends"></span> <span>Customers</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="restuarant/products"
+          ><span class="las la-hamburger"></span> <span>Products</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="/restuarant/orders"
+          ><span class="las la-clipboard-list"></span> <span>Orders</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="restuarant/drivers"
+          ><span class="las la-car"></span> <span>Drivers</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="/restuarant/bookings"
+          ><span class="las la-book"></span> <span>Bookings</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href=""
+          ><span class="las la-star-half-alt"></span>
+          <span>Reviews & Ratings</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+    </ul>
+  </div>
 </div>
-<!--create Contact form-->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <form [formGroup]="form">
-                <div class="mb-2">
-                    <input class="form-control" placeholder="full_name" type="text" formControlName="name">
-                </div>
-                <div class="mb-2">
-                    <input class="form-control" placeholder="email" type="number" formControlName="price">
-                </div>
-                <!-- <div class="mb-2">
-                    <input class="form-control" min="0" start="1" placeholder="mobile" type="number"
-                        formControlName="cell_phone">
-                </div> -->
-                <div class="mb-2">
-                    <input class="form-control" placeholder="Company" type="text" formControlName="description">
-                </div>
-                <!-- <div class="mb-2">
-                    <input class="form-control" placeholder="Title" type="text" formControlName="title">
-                </div> -->
-                <!-- <div class="mb-2">
-                    <input class="form-control" placeholder="Photo url" type="text" formControlName="photoUrl">
-                </div> -->
-                <div class="mb-2">
-                    <input class="btn btn-danger" type="Submit" value="Create" (click)="onSubmit()">
-                    <!-- <button (click)="save()" class="btn btn-dark" style="background-color:#011345">Save</button> -->
-                    <a class="btn btn-dark ms-2" routerLink="/">Close</a>
-                </div>
-            </form>
-        </div>
-        <div class="col-sm-4">
-            <img src="../../../assets/image/images.png">
-        </div>
+
+<div class="main-content">
+  <header>
+    <h1>
+      <label for="nav-toggle">
+        <span class="las la-bars"></span>
+      </label>
+    </h1>
+
+    <div class="search-wrapper">
+      <span class="las la-search"></span>
+      <input type="search" placeholder="search here" />
     </div>
+
+    <div class="user-wrapper">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
+        width="40px"
+        height="40px"
+        alt=""
+      />
+      <div>
+        <h4>Toka</h4>
+        <small>Addmin</small>
+      </div>
+    </div>
+  </header>
+  <main>
+
+  <div class="toka mt-3">
+    <div class="row">
+      <div class="col">
+        <p class="h3 fw-bold text-black">Add Product</p>
+        <p class="fst-italic mb-4">
+          “Truly, love is delightful and pleasant food, supplying, as it
+          does,<br />
+          rest to the weary, strength to the weak, and joy to the sorrowful.
+          <br />It in fact renders the yoke of truth easy and its burden light.”
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--create Contact form-->
+  <div class="container ml-2">
+    <div class="row">
+      <div class="col-sm-4 ml-2 ">
+        <form [formGroup]="form">
+          <div class="mb-2">
+            <input
+              class="form-control pl-2"
+              placeholder="Name of Product"
+              type="text"
+              formControlName="name"
+            />
+          </div>
+          <div class="mb-2">
+            <input
+              class="form-control pl-2"
+              placeholder="Price"
+              type="number"
+              formControlName="price"
+            />
+          </div>
+          <div class="mb-2">
+            <textarea
+              class="form-control pl-2"
+              placeholder="Description"
+              type="text"
+              formControlName="description"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <!-- <label for="formFile" class="form-label">Upload the Picture</label> -->
+            <input class="form-control pl-2" type="file" id="formFile" />
+          </div>
+
+          <div class="mb-2">
+            <input
+              class="btn btn-primary pl-2"
+              type="Submit"
+              value="Create"
+              (click)="onSubmit()"
+            />
+            <!-- <button (click)="save()" class="btn btn-dark" style="background-color:#011345">Save</button> -->
+            <a class="btn btn-dark ms-2 pl-2" routerLink="/">Close</a>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <img
+          src="https://media.istockphoto.com/id/1081422898/photo/pan-fried-duck.jpg?s=612x612&w=0&k=20&c=kzlrX7KJivvufQx9mLd-gMiMHR6lC2cgX009k9XO6VA="
+        />
+      </div>
+    </div>
+   
+  </div>
+  </main>
 </div>
