@@ -98,6 +98,7 @@
           <td>No of guests</td>
           <td>Message</td>
           <td>Status</td>
+          <td>Actions</td>
         </tr>
       </thead>
 
@@ -111,6 +112,7 @@
           <td>{{booking.attributes.guests}}</td>
           <td>{{booking.attributes.message}}</td>
           <td>{{booking.attributes.status}}</td>
+          <td><button (click)="approveItem(itemId)" >Approve</button></td>
         </tr>
 
 
