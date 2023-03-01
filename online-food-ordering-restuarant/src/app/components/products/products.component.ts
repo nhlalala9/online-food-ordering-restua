@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/service/products.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -12,36 +13,36 @@ import { Router } from '@angular/router';
 export class ProductsComponent implements OnInit {
 
   products: any;
+  apiUrl = 'http://localhost:1337';
 
-  constructor(private http:HttpClient, private ProductsService:ProductsService, private router: Router ) { }
+  constructor(private http: HttpClient, private ProductsService: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
-    this.ProductsService.getProducts().subscribe((products: any) =>{
+    this.loadProducts();
+
+  }
+
+  loadProducts() {
+    this.ProductsService.getProducts().subscribe((products: any) => {
       this.products = products.data;
       console.log(products.data)
     })
-    
   }
 
-  deleteProducts(){
+  deleteProducts(id: number) {
     if (confirm("Do you really want to delete this product")) {
-      this.http
-        .delete("http://localhost:1337/api/products/")
-        .subscribe((data) => {
-          this.router.navigate(["/"]);
-        });
+      this.ProductsService.deleteProductById(id).subscribe(
+        data => {
+          console.log(data);
+          this.loadProducts();
+        },
+        error => console.log(error)
+      )
     }
   }
 
- 
-
-}
 
 
-
-
-function products(products: any) {
-  throw new Error('Function not implemented.');
 }
 
 

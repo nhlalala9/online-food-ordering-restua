@@ -53,11 +53,14 @@ export class AddProductComponent implements OnInit {
       }
     };
     console.log(this.serve),"why";
+     
 
     this.products.createProducts(this.serve).subscribe(err => {
       console.log("this" + err.toString());
+      this.router.navigate(["/restuarant/products"])
     },(error)=>{
       this.errorMessage=error;
+      
   })
   complete:()=>{
     console.log('user added succesfully')
