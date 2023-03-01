@@ -90,10 +90,11 @@
     </div>
   </header>
 
-  <div>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-  </div>
+  <div class="mt-6">
+    <button   type="button" class="why btn btn-secondary"><a href="restuarant/add"><i class="las la-plus-circle"></i> Add Product</a></button>
+</div>
   <div class="row">
+
     <div  class="d-flex justify-content-center dashboard" *ngFor="let product of products">
         <div class="dashboard-card" style="width: 18rem;">
 
@@ -105,9 +106,10 @@
                 </h4>
                 <span>{{product?.attributes?.price}}</span>
                 <p>{{product?.attributes?.description}}</p>
-
-                <button type="button" class="btn btn-primary">Edit</button>
-                <button type="button" class="btn btn-secondary" (click)="deleteProducts()">Delete</button>
+                <div class="d-flex justify-content-between">
+                <button type="button" class="wh btn btn-primary"><i class="las la-pen"></i> Edit</button>
+                <button type="button" class="wh btn btn-danger" (click)="deleteProducts()"><i class="las la-trash"></i> Delete</button>
+                </div>
             </div>
         </div>
 
