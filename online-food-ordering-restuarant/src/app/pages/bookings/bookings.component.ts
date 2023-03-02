@@ -10,6 +10,8 @@ import { BookingsService } from 'src/app/service/bookings.service';
 export class BookingsComponent implements OnInit {
 bookings: any;
 
+itemId=2;
+
   constructor(private http:HttpClient, private BookingsService:BookingsService) { }
 
   ngOnInit(): void {
@@ -19,4 +21,19 @@ bookings: any;
     })
   }
 
+  approveItem(itemId: number) {
+    this.BookingsService.updateItemStatus(itemId, 'Approved')
+      .subscribe(
+        res => {
+          console.log(res);
+          // Handle success
+        },
+        err => {
+          console.error(err);
+          // Handle error
+        }
+      );
+  }
 }
+
+

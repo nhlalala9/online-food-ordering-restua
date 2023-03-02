@@ -13,4 +13,10 @@ export class BookingsService {
   getBookings(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/api/bookings`);
   }
+
+  updateItemStatus(itemId: number, status: string): Observable<any> {
+    const url = `${this.apiUrl}/api/bookings?filters[id][$eq]=${itemId}`;
+    // const payload = { status: newStatus };
+    return this.http.put(url, {status});
+  }
 }

@@ -1,0 +1,322 @@
+.card .search-area2 {
+    border: 1px solid #dbdbdb;
+    border-radius: 0.5rem;
+    width: 23.25rem;
+}
+/* @media only screen and (max-width: 74.9375rem)
+.search-area2.style-1 {
+    width: 30.25rem;
+} */
+.card .search-area2 .form-control, .card .search-area2 .input-group-text {
+    background-color: initial;
+    border: none;
+}
+.search-area2 .input-group-text {
+    background-color: initial!important;
+    border: none;
+    padding: 0;
+}
+.input-group-text {
+    border-radius: 0.5rem;
+    justify-content: center;
+    min-width: 3.125rem;
+}
+.input-group>.form-control, .input-group>.form-select {
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    width: 1%;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -1px;
+}
+.p-0 {
+    padding: 0!important;
+}
+.form-control {
+    background: #fff;
+    border-color: #b3b3b3;
+    border-radius: 0.5rem;
+    color: #6e6e6e;
+    font-size: 1rem;
+    height: 3rem;
+    line-height: 1.4;
+    padding: 0.375rem 1rem;
+}
+.search-area2 .form-control {
+    background-color: initial;
+    border: none;
+    font-size: .938rem;
+    padding: 0;
+}
+a {
+    color: #3d4152;
+}
+
+a {
+    color: #fc8019;
+    
+}
+.search-area2 .input-group-text svg {
+    height: 1.563rem;
+    width: 1.563rem;
+}
+
+.input-group-text {
+    align-items: center;
+    background-color: #e9ecef;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.75rem;
+    color: #777;
+    display: flex;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.search-area2.style-1 {
+    background-color: initial;
+    border: 1px solid #dbdbdb;
+    width: 46.25rem;
+}
+.search-area2 {
+    border: 1px solid #b3b3b3;
+    border-radius: 0.5rem;
+    padding: 0 10px;
+    width: 23.25rem;
+}
+.w-50 {
+    width: 50%!important;
+}
+.input-group {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+
+.grid-tab .nav-link {
+    border: 1px solid #dbdbdb;
+    height: 3rem;
+    padding: 0;
+    width: 3rem;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+}
+.nav-pills .nav-link {
+    background: none;
+    border: 0;
+    border-radius: 0.75rem;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.dropdown .dropdown-toggle, .nav-link {
+    cursor: pointer;
+}
+.me-3 {
+    margin-right: 1rem!important;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+button {
+    cursor: pointer;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+button {
+    border-radius: 0;
+}
+.grid-tab .nav-link.active {
+    background-color: #f8b6021a;
+    border-color: rgba(252,128,25,.1);
+    border-color: var(--rgba-primary-1);
+    box-shadow: none;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #fc8019;
+    background-color: var(--primary);
+    box-shadow: 0 0 1.25rem 0 rgb(252 128 25 / 20%);
+    box-shadow: 0 0 1.25rem 0 var(--rgba-primary-2);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+}
+.grid-tab .nav-link {
+    /* border: 1px solid #dbdbdb; */
+    height: 3rem;
+    /* padding: 0; */
+    /* width: 3rem; */
+}
+.nav-pills .nav-link {
+    /* border-radius: 0.5rem; */
+    /* padding: 0.75rem 1.25rem; */
+}
+.nav-pills .nav-link {
+    /* background: none; */
+    /* border: 0; */
+    border-radius: 0.75rem;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.dropdown .dropdown-toggle, .nav-link {
+    cursor: pointer;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+button {
+    cursor: pointer;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+button {
+    border-radius: 0;
+}
+.tab-content>.tab-pane {
+    display: none;
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+
+ .fade {
+    transition: opacity .15s linear;
+}
+.tab-content>.active {
+    display: block;
+}
+ 
+
+
+.cate-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card {
+    background-color: initial;
+    border: 0 solid transparent;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 0.5rem;
+    box-shadow: none;
+    height: calc(100% - 30px);
+    margin-bottom: 1.875rem;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+.card {
+    word-wrap: break-word;
+    background-clip: initial;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.card-body {
+    padding: 1.875rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.restro-review img {
+    height: 3.5rem;
+    margin-right: 1rem;
+    width: 3.5rem;
+}
+.orders-img img, .restro-review img {
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+img, svg {
+    vertical-align: middle;
+}
+
+
+.recent-review img {
+    height: 2.625rem;
+    margin-right: 1.125rem;
+    object-fit: over;
+    width: 3.25rem;
+}
+.grid-tab .nav-link svg path {
+    fill: #7e808c;
+}
+.grid-tab .nav-link.active svg path {
+    fill: #fc8019;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.recent-review ul li {
+    margin-right: 0.5rem;
+}
+li {
+    list-style: none;
+}
+p {
+    line-height: 1.8;
+}
+p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
