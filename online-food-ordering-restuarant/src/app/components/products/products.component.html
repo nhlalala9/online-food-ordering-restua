@@ -173,14 +173,18 @@
         <div class="card-footer border-0 pt-2">
           <div class="common d-flex align-items-center justify-content-between">
             <div>
+                <a routerLink="/restuarant/edit/{{ product.id }}">
                 <div class="plus2 c-pointer">
                     <div class="sub-bx"><i class="las la-pen"></i></div>
                   </div>
+                </a>
               
               <!-- <h3 class="mb-0 text-primary">R {{ product?.attributes?.price }}</h3> -->
             </div>
+            <div (click)="deleteProducts(product.id)">
             <div class="plus c-pointer .text-danger .bg-danger">
               <div class="sub-bx"><i class="las la-trash"></i></div>
+            </div>
             </div>
            
           </div>
