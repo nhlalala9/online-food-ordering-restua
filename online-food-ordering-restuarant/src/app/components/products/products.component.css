@@ -568,6 +568,9 @@ header{
     margin-bottom: 1.875rem;
     position: relative;
     transition: all .5s ease-in-out;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .card {
