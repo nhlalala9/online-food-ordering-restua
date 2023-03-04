@@ -60,12 +60,7 @@
 </div>
 
 <div class="main-content">
-  <header>
-    <h1>
-      <label for="nav-toggle">
-        <span class="las la-bars"></span>
-      </label>
-    </h1>
+ 
 
     <header>
       <h1>
@@ -74,10 +69,29 @@
         </label>
       </h1>
 
-      <div class="search-wrapper">
-        <span class="las la-search"></span>
-        <input type="search" placeholder="search here" />
-      </div>
+
+        <div class="input-group search-area2 style-1 w-50">
+          <span class="input-group-text p-0"
+            ><a href="/react/demo/customer-reviews"
+              ><svg
+                class="me-1"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.414 24.586L22.337 19.509C23.386 17.928 24 16.035 24 14C24 8.486 19.514 4 14 4C8.486 4 4 8.486 4 14C4 19.514 8.486 24 14 24C16.035 24 17.928 23.386 19.509 22.337L24.586 27.414C25.366 28.195 26.634 28.195 27.414 27.414C28.195 26.633 28.195 25.367 27.414 24.586ZM7 14C7 10.14 10.14 7 14 7C17.86 7 21 10.14 21 14C21 17.86 17.86 21 14 21C10.14 21 7 17.86 7 14Z"
+                  fill="#FC8019"
+                ></path></svg></a></span
+          ><input
+            type="text"
+            class="form-control p-0"
+            placeholder="What do you want eat today..."
+          />
+        </div>
+    
 
       <div class="user-wrapper">
         <img
@@ -93,19 +107,8 @@
       </div>
     </header>
 
-    <div class="user-wrapper">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
-        width="40px"
-        height="40px"
-        alt=""
-      />
-      <div>
-        <h4>Toka</h4>
-        <small>Addmin</small>
-      </div>
-    </div>
-  </header>
+    
+
 
 <div class="row">
   <div class="col-xl-12">
@@ -114,7 +117,7 @@
         <div>
           <h3 class="cate-title font-w700 mb-4">Recent Reviews</h3>
           <div class="d-flex align-items-center justifiy-content-between mb-4">
-            <div class="input-group search-area2 style-1 w-50">
+            <!-- <div class="input-group search-area2 style-1 w-50">
               <span class="input-group-text p-0"
                 ><a href="/react/demo/customer-reviews"
                   ><svg
@@ -134,7 +137,7 @@
                 class="form-control p-0"
                 placeholder="What do you want eat today..."
               />
-            </div>
+            </div> -->
             <ul
               class="grid-tab nav nav-pills ms-auto nav"
               id="list-tab"
@@ -145,14 +148,14 @@
         </div>
         <div class="tab-content">
          
-          <div *ngFor="let rating of rati"
+          <div
             role="tabpanel"
             id="react-aria5257160692-4-tabpane-Grid"
             aria-labelledby="react-aria5257160692-4-tab-Grid"
             class="fade tab-pane active show"
           >
             <div class="row">
-              <div class="col-xl-3 col-xxl-4 col-sm-6">
+              <div class="col-xl-3 col-xxl-4 col-sm-6"  *ngFor="let rating of rati">
                 <div class="card">
                   <div class="card-body">
                     <div
