@@ -91,17 +91,17 @@
             </nav>
             <div class="tab-content">
               <div role="tabpanel" id="react-aria31190898-8-tabpane-Order"
-                aria-labelledby="react-aria31190898-8-tab-Order" class="fade tab-pane active show">
+                aria-labelledby="react-aria31190898-8-tab-Order" class="fade tab-pane active show" *ngFor="let item of orders">
                 <div class="orderin-bx d-flex align-items-center justify-content-between">
                   <div>
-                    <h4>Order #1</h4><span>June 1, 2020, 08:22 AM</span>
+                    <h4>Order #{{item?.id}}</h4><span>June 1, 2020, 08:22 AM</span>
                   </div>
                   <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                    <h4 class="text-primary mb-0">R {{item?.attributes.total}}</h4>
 
                   </div>
                 </div>
-                <div class="orderin-bx d-flex align-items-center justify-content-between">
+                <!-- <div class="orderin-bx d-flex align-items-center justify-content-between">
                   <div>
                     <h4>Order #2</h4><span>June 1, 2020, 08:22 AM</span>
                   </div>
@@ -145,7 +145,7 @@
                     <h4 class="text-primary mb-0">$202.00</h4>
 
                   </div>
-                </div>
+                </div> -->
               </div>
               <div role="tabpanel" id="react-aria31190898-8-tabpane-Prepared"
                 aria-labelledby="react-aria31190898-8-tab-Prepared" class="fade tab-pane">
