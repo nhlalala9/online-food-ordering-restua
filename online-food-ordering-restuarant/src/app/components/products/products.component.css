@@ -624,7 +624,7 @@ header{
 } */
 
 .card.dishe-bx img {
-    height: 9.063rem;
+    /* height: 9.063rem; */
     object-fit: cover;
     width: 13.75rem;
 }
