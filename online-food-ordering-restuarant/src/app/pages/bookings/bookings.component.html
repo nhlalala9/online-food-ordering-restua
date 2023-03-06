@@ -1,4 +1,4 @@
-<input type="checkbox" id="nav-toggle">
+<input type="checkbox" id="nav-toggle" />
 
 <div class="sidebar">
   <div class="sidebar-brand">
@@ -7,9 +7,9 @@
   <div class="sidebar-menu">
     <ul>
       <li>
-        <a href="restuarant/dashboard" class="active"><span class="las la-igloo"></span>
-          <span>DashBoard</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
+        <a href="restuarant/dashboard" class="active"
+          ><span class="las la-igloo"></span> <span>DashBoard</span></a
+        >
       </li>
       <!-- <li>
         <a href="restuarant/customers"><span class="las la-user-friends"></span>
@@ -17,14 +17,14 @@
        
       </li> -->
       <li>
-        <a href="restuarant/products"><span class="las la-hamburger"></span>
-          <span>Products</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
+        <a href="restuarant/products"
+          ><span class="las la-hamburger"></span> <span>Products</span></a
+        >
       </li>
       <li>
-        <a href="/restuarant/orders"><span class="las la-clipboard-list"></span>
-          <span>Orders</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
+        <a href="/restuarant/orders"
+          ><span class="las la-clipboard-list"></span> <span>Orders</span></a
+        >
       </li>
       <!-- <li>
         <a href="restuarant/drivers"><span class="las la-car"></span>
@@ -32,30 +32,28 @@
        
       </li> -->
       <li>
-        <a href="/restuarant/bookings"><span class="las la-book"></span>
-          <span>Bookings</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
+        <a href="/restuarant/bookings"
+          ><span class="las la-book"></span> <span>Bookings</span></a
+        >
       </li>
       <li>
-        <a href=""><span class="las la-star-half-alt"></span>
-          <span>Reviews & Ratings</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
+        <a href=""
+          ><span class="las la-star-half-alt"></span>
+          <span>Reviews & Ratings</span></a
+        >
       </li>
     </ul>
   </div>
   <div class="log">
     <li>
-      <a href="/restuarant/login"><span class="las la-arrow-left"></span>
-        <span>Logout</span></a>
+      <a href="/restuarant/login"
+        ><span class="las la-arrow-left"></span> <span>Logout</span></a
+      >
     </li>
   </div>
 </div>
 
-
-
 <div class="main-content">
-
-
   <header>
     <h1>
       <label for="nav-toggle">
@@ -69,7 +67,12 @@
     </div>
 
     <div class="user-wrapper">
-      <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png" width="40px" height="40px" alt="" />
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
+        width="40px"
+        height="40px"
+        alt=""
+      />
       <div>
         <h4>Toka</h4>
         <small>Addmin</small>
@@ -77,14 +80,14 @@
     </div>
   </header>
 
-
-
   <div class="dashboard-banner">
     <img
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVnQ_Hcf--IZzOKDIUdRKSDT7jwWL7TFLW5QgWO2OVIh4Lc1n02h0-3SGPQkRFIWsOats&usqp=CAU"
-      width="100%" height="500px" alt="" />
+      width="100%"
+      height="500px"
+      alt=""
+    />
   </div>
-
 
   <div class="table-responsive">
     <table width="100%">
@@ -103,17 +106,23 @@
 
       <tbody>
         <tr *ngFor="let booking of bookings">
-          <td>{{booking.attributes.name}}</td>
-          <td>{{booking.attributes.time}}</td>
-          <td>{{booking.attributes.email}}</td>
-          <td>{{booking.attributes.phone}}</td>
-          <td>{{booking.attributes.guests}}</td>
-          <td>{{booking.attributes.message}}</td>
-          <td>{{booking.attributes.status}}</td>
-          <td><button class="status-btn"  *ngIf="booking.attributes.status === 'Pending'"  (click)="approveItem(booking)" >Approve</button></td>
+          <td>{{ booking.attributes.name }}</td>
+          <td>{{ booking.attributes.time }}</td>
+          <td>{{ booking.attributes.email }}</td>
+          <td>{{ booking.attributes.phone }}</td>
+          <td>{{ booking.attributes.guests }}</td>
+          <td>{{ booking.attributes.message }}</td>
+          <td>{{ booking.attributes.status }}</td>
+          <td>
+            <button
+              class="status-btn"
+              *ngIf="booking.attributes.status === 'Pending'"
+              (click)="approveItem(booking)"
+            >
+              Approve
+            </button>
+          </td>
         </tr>
-
-
       </tbody>
     </table>
   </div>

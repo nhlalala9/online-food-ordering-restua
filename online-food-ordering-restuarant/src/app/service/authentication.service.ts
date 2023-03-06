@@ -11,7 +11,7 @@ interface AuthResponse {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthenticationService {
   private url = `${environment.appUrl}/auth/local/`;
@@ -19,14 +19,18 @@ export class AuthenticationService {
 
   loggedInStatus$ = this.loginTracker.asObservable();
 
-  constructor(private http: HttpClient, private ss: StorageService) { }
+  constructor(private http: HttpClient, private ss: StorageService) {}
 
   login(identifier: string, password: string) {
     return this.http.post<AuthResponse>(this.url, { identifier, password });
   }
 
   register(username: string, email: string, password: string) {
-    return this.http.post<AuthResponse>(`${this.url}register`, { username, email, password });
+    return this.http.post<AuthResponse>(`${this.url}register`, {
+      username,
+      email,
+      password,
+    });
   }
 
   checkIfLoggedIn() {
@@ -39,8 +43,8 @@ export class AuthenticationService {
       ['userEmail', resp.user.email],
       ['username', resp.user.username],
       ['loggedIn', 'true'],
-      ['token', resp.jwt]
-    ].forEach(item => this.ss.setItem(item[0], item[1]));
+      ['token', resp.jwt],
+    ].forEach((item) => this.ss.setItem(item[0], item[1]));
     this.loginTracker.next(true);
   }
 
@@ -48,7 +52,7 @@ export class AuthenticationService {
     return {
       id: this.ss.getItem('userId') || '',
       username: this.ss.getItem('username') || '',
-      email: this.ss.getItem('userEmail') || ''
+      email: this.ss.getItem('userEmail') || '',
     };
   }
 
@@ -57,13 +61,15 @@ export class AuthenticationService {
   }
 
   logout() {
-    ['userId', 'userEmail', 'username', 'loggedIn', 'token'].forEach(item => this.ss.removeItem(item));
+    ['userId', 'userEmail', 'username', 'loggedIn', 'token'].forEach((item) =>
+      this.ss.removeItem(item)
+    );
     this.loginTracker.next(false);
   }
 
   getAuthHeader() {
     return {
-      headers: { 'Authorization': `Bearer ${this.getPersistedToken()}` }
+      headers: { Authorization: `Bearer ${this.getPersistedToken()}` },
     };
-  };
+  }
 }
