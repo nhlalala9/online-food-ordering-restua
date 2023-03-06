@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -23,10 +22,7 @@ import { EditProductComponent } from './pages/edit-product/edit-product.componen
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 // import { LandingComponent } from './components/landing/landing.component';
 
-
-
-
-@NgModule({  
+@NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
@@ -45,23 +41,17 @@ import { ReviewsComponent } from './pages/reviews/reviews.component';
     AddProductComponent,
     EditProductComponent,
     ReviewsComponent,
-    // ProductsComponent,
-  
   ],
   imports: [
     BrowserModule,
-    // RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    // CommonModule,
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
-
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
