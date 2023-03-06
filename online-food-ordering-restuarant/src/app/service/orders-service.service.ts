@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class OrdersServiceService {
-  private apiUrl = 'http://http://localhost:1337/api/orders';
+  private apiUrl = 'http://localhost:1337/api/orders';
 
   constructor(private http: HttpClient) { }
 

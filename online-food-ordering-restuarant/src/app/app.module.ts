@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule, HttpParams } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -52,10 +53,13 @@ import { ReviewsComponent } from './pages/reviews/reviews.component';
     // RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     // CommonModule,
+    BrowserAnimationsModule,
+    // ToastrModule.forRoot(),
 
-    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
