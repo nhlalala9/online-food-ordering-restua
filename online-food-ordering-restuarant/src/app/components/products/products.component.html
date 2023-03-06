@@ -1,61 +1,63 @@
 <input type="checkbox" id="nav-toggle" />
 
 <div class="sidebar">
-    <div class="sidebar-brand">
-        <h2><span class="las la-star"></span> <span>Food</span></h2>
-    </div>
-    <div class="sidebar-menu">
-      <ul>
-          <li>
-              <a href="restuarant/dashboard" class="active"><span class="las la-igloo"></span>
-              <span>DashBoard</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href="restuarant/customers"><span class="las la-user-friends"></span>
-              <span>Customers</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href="restuarant/products"><span class="las la-hamburger"></span>
-              <span>Products</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href="/restuarant/orders"><span class="las la-clipboard-list"></span>
-              <span>Orders</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-              <a href="restuarant/drivers"><span class="las la-car"></span>
-              <span>Drivers</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-          <li>
-            <a href="/restuarant/bookings"><span class="las la-book"></span>
-            <span>Bookings</span></a>
-            <!-- <i class="las la-battery-three-quarters"></i> -->
-        </li>
-        <div>
-          
-        </div>
-          <li>
-              <a href=""><span class="las la-star-half-alt"></span>
-              <span>Reviews & Ratings</span></a>
-              <!-- <i class="las la-battery-three-quarters"></i> -->
-          </li>
-      </ul>
+  <div class="sidebar-brand">
+    <h2><span class="las la-star"></span> <span>Food</span></h2>
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <a href="restuarant/dashboard" class="active"
+          ><span class="las la-igloo"></span> <span>DashBoard</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="restuarant/customers"
+          ><span class="las la-user-friends"></span> <span>Customers</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="restuarant/products"
+          ><span class="las la-hamburger"></span> <span>Products</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="/restuarant/orders"
+          ><span class="las la-clipboard-list"></span> <span>Orders</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="restuarant/drivers"
+          ><span class="las la-car"></span> <span>Drivers</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <li>
+        <a href="/restuarant/bookings"
+          ><span class="las la-book"></span> <span>Bookings</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+      <div></div>
+      <li>
+        <a href="/restuarant/reviews"
+          ><span class="las la-star-half-alt"></span>
+          <span>Reviews & Ratings</span></a
+        >
+        <!-- <i class="las la-battery-three-quarters"></i> -->
+      </li>
+    </ul>
   </div>
   <div class="log">
     <li>
-      <a href=""><span  class="las la-arrow-left"></span>
-      <span>Logout</span></a>
+      <a href=""><span class="las la-arrow-left"></span> <span>Logout</span></a>
     </li>
   </div>
- 
 </div>
-
-
 
 <div class="main-content">
   <header>
@@ -66,27 +68,30 @@
     </h1>
 
     <header>
-        <h1>
-            <label for="nav-toggle">
-                <span class="las la-bars"></span>
-            </label>
-        </h1>
+      <h1>
+        <label for="nav-toggle">
+          <span class="las la-bars"></span>
+        </label>
+      </h1>
 
-        <div class="search-wrapper">
-            <span class="las la-search"></span>
-            <input type="search" placeholder="search here" />
-        </div>
+      <div class="search-wrapper">
+        <span class="las la-search"></span>
+        <input type="search" placeholder="search here" />
+      </div>
 
-        <div class="user-wrapper">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png" width="40px" height="40px" alt="" />
-            <div>
-                <h4>Toka</h4>
-                <small>Addmin</small>
-            </div>
+      <div class="user-wrapper">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
+          width="40px"
+          height="40px"
+          alt=""
+        />
+        <div>
+          <h4>Toka</h4>
+          <small>Addmin</small>
         </div>
+      </div>
     </header>
-
-
 
     <div class="user-wrapper">
       <img
@@ -103,30 +108,123 @@
   </header>
 
   <div class="mt-6">
-    <button   type="button" class="why btn btn-secondary"><a href="restuarant/add"><i class="las la-plus-circle"></i> Add Product</a></button>
-</div>
-  <div class="row">
-
-    <div  class="d-flex justify-content-center dashboard" *ngFor="let product of products">
-        <div class="dashboard-card" style="width: 18rem;">
-
-            <img [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
-            src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
-                alt="" class="card-image">
-            <div class="card-detail">
-                <h4>{{product?.attributes?.name}}
-                </h4>
-                <span>{{product?.attributes?.price}}</span>
-                <p>{{product?.attributes?.description}}</p>
+    <button type="button" class="why btn btn-success">
+      <a href="restuarant/add"
+        ><i class="las la-plus-circle"></i> Add Product</a
+      >
+    </button>
+  </div>
                 
+  <div class="row">
+    <div class="col-xl-3 col-xxl-4 col-sm-6 " *ngFor="let product of products">
+      <div class="card dishe-bx b-hover style-1">
+        <!-- <i class="fa-solid fa-heart ms-auto c-heart c-pointer"></i> -->
+        <div class="card-body pb-0 pt-3">
+          <div class="text-center mb-2">
+            <img
+            [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
+            src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
+              alt=""
+            />
+          </div>
+          <div class="border-bottom pb-3">
+            <h4 class="font-w500 mb-1">{{ product?.attributes?.name }}</h4>
+            <h4 class="font-w500 mb-1">R {{ product?.attributes?.price }}</h4>
+            <div class="d-flex align-items-center">
+              <svg
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 0.500031L9.79611 6.02789H15.6085L10.9062 9.4443L12.7023 14.9722L8 11.5558L3.29772 14.9722L5.09383 9.4443L0.391548 6.02789H6.20389L8 0.500031Z"
+                  fill="#FC8019"></path>
+              </svg>
+              <p class="font-w500 mb-0 px-2">5.0</p>
+              <svg
+                class="me-2"
+                width="4"
+                height="5"
+                viewBox="0 0 4 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="2" cy="2.50003" r="2" fill="#C4C4C4"></circle>
+              </svg>
+              <p class="font-w500 mb-0">1k+ Reviews</p>
+              <svg
+                class="mx-2"
+                width="4"
+                height="5"
+                viewBox="0 0 4 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="2" cy="2.5" r="2" fill="#C4C4C4"></circle>
+              </svg>
+              <!-- <p class="font-w500 mb-0">{{ product?.attributes?.description }}</p> -->
             </div>
-            <div class="d-flex justify-content-between ml-2 mr-2">
-                <button type="button" class="wh btn btn-primary"><i class="las la-pen"></i> Edit</button>
-                <button type="button" class="wh btn btn-danger" (click)="deleteProducts(product.id)"><i class="las la-trash"></i> Delete</button>
-                </div>
+            <p class="font-w500 mb-0"  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200ch;">{{ product?.attributes?.description }}</p>
+          </div>
         </div>
-
+        <div class="card-footer border-0 pt-2">
+          <div class="common d-flex align-items-center justify-content-between">
+            <div>
+                <a routerLink="/restuarant/edit/{{ product.id }}">
+                <div class="plus2 c-pointer">
+                    <div class="sub-bx"><i class="las la-pen"></i></div>
+                  </div>
+                </a>
+              
+              <!-- <h3 class="mb-0 text-primary">R {{ product?.attributes?.price }}</h3> -->
+            </div>
+            <div (click)="deleteProducts(product.id)">
+            <div class="plus c-pointer .text-danger .bg-danger">
+              <div class="sub-bx"><i class="las la-trash"></i></div>
+            </div>
+            </div>
+           
+          </div>
+          
+        </div>
+        
+      </div>
     </div>
-</div>
+  </div> 
 
-
+<!-- <div class="row">
+    <div
+      class="d-flex justify-content-center dashboard"
+      *ngFor="let product of products"
+    >
+      <div class="dashboard-card" style="width: 25rem">
+        <img
+          [srcset]="product?.attributes?.Picture?.data?.attributes?.url"
+          src="https://www.jennycancook.com/wp-content/uploads/2014/08/comingsoon.jpg"
+          alt=""
+          class="card-image"
+        />
+        <div class="card-detail">
+          <h4>{{ product?.attributes?.name }}</h4>
+          <span>R {{ product?.attributes?.price }}</span>
+          <p style="height: 8rem">{{ product?.attributes?.description }}</p>
+        </div>
+        <div class="d-flex justify-content-between ml-2 mr-2 mb-2">
+          <a routerLink="/restuarant/edit/{{ product.id }}">
+            <button type="button" class="wh btn btn-primary">
+              <i class="las la-pen"></i> Edit
+            </button></a
+          >
+          <button
+            type="button"
+            class="wh btn btn-danger"
+            (click)="deleteProducts(product.id)"
+          >
+            <i class="las la-trash"></i> Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->

@@ -92,25 +92,25 @@
         <tr>
           <td>Name</td>
           <td>Date</td>
-          <td>Time</td>
           <td>Email</td>
           <td>Phone</td>
           <td>No of guests</td>
           <td>Message</td>
           <td>Status</td>
+          <td>Actions</td>
         </tr>
       </thead>
 
       <tbody>
         <tr *ngFor="let booking of bookings">
           <td>{{booking.attributes.name}}</td>
-          <td>{{booking.attributes.date}}</td>
           <td>{{booking.attributes.time}}</td>
           <td>{{booking.attributes.email}}</td>
           <td>{{booking.attributes.phone}}</td>
           <td>{{booking.attributes.guests}}</td>
           <td>{{booking.attributes.message}}</td>
           <td>{{booking.attributes.status}}</td>
+          <td><button class="status-btn"  *ngIf="booking.attributes.status === 'Pending'"  (click)="approveItem(booking)" >Approve</button></td>
         </tr>
 
 

@@ -16,6 +16,17 @@
     border-radius: 30px;
 }
 
+.status-btn{
+    padding:2px 4px;
+    background-color: grey;
+    border-radius: 2px;
+}
+
+.status-btn:hover{
+    color: white;
+    background-color: blue;
+}
+
 .log{
     margin-bottom: 100%;
     margin-top: 120%;
