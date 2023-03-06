@@ -11,11 +11,11 @@
           <span>DashBoard</span></a>
         <!-- <i class="las la-battery-three-quarters"></i> -->
       </li>
-      <li>
+      <!-- <li>
         <a href="restuarant/customers"><span class="las la-user-friends"></span>
           <span>Customers</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
-      </li>
+       
+      </li> -->
       <li>
         <a href="restuarant/products"><span class="las la-hamburger"></span>
           <span>Products</span></a>
@@ -26,18 +26,18 @@
           <span>Orders</span></a>
         <!-- <i class="las la-battery-three-quarters"></i> -->
       </li>
-      <li>
+      <!-- <li>
         <a href="restuarant/drivers"><span class="las la-car"></span>
           <span>Drivers</span></a>
-        <!-- <i class="las la-battery-three-quarters"></i> -->
-      </li>
+       
+      </li> -->
       <li>
         <a href="/restuarant/bookings"><span class="las la-book"></span>
           <span>Bookings</span></a>
         <!-- <i class="las la-battery-three-quarters"></i> -->
       </li>
       <li>
-        <a href=""><span class="las la-star-half-alt"></span>
+        <a href="/restuarant/reviews"><span class="las la-star-half-alt"></span>
           <span>Reviews & Ratings</span></a>
         <!-- <i class="las la-battery-three-quarters"></i> -->
       </li>
@@ -92,9 +92,9 @@
             <div class="tab-content">
               <div role="tabpanel" id="react-aria31190898-8-tabpane-Order"
                 aria-labelledby="react-aria31190898-8-tab-Order" class="fade tab-pane active show" *ngFor="let item of orders">
-                <div class="orderin-bx d-flex align-items-center justify-content-between">
-                  <div>
-                    <h4>Order #{{item?.id}}</h4><span>June 1, 2020, 08:22 AM</span>
+                <div (click)=selector(item?.id) class="orderin-bx d-flex align-items-center justify-content-between click">
+                  <div >
+                    <h4>Order #{{item?.id}}</h4><span>{{item?.attributes.date}}</span>
                   </div>
                   <div class="d-flex align-items-center">
                     <h4 class="text-primary mb-0">R {{item?.attributes.total}}</h4>
@@ -272,7 +272,7 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-between border-bottom flex-wrap">
                 <div class="mb-4">
-                  <h4 class="font-w500">Order #1</h4><span>June 1, 2020, 08:22 AM</span>
+                  <h4 class="font-w500">Order #{{order?.id}}</h4><span>{{order?.attributes?.date}}</span>
                 </div>
                 <div class="orders-img d-flex mb-4 ">
                   <img src="https://cdn-icons-png.flaticon.com/512/25/25634.png" alt="" />
@@ -286,7 +286,7 @@
                   <div class="address-bx mt-3"><span class="d-block mb-2">Delivery Address</span>
                     <div class="d-flex align-items-center mb-2">
                       <i class="fas fa-map-marker-alt fa-3x"></i>
-                      <h5 class="mb-0 ml-5">{{order?.attributes?.address}}<br />Brixton</h5>
+                      <h5 class="mb-0 ml-5">{{order?.attributes?.address}}<br /></h5>
                     </div>
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </p> -->
                   </div>
@@ -332,7 +332,7 @@
               <hr style="opacity: 0.7;">
               <div class="d-flex align-items-center justify-content-between">
                 <h4 class="font-w500 mb-0">Total</h4>
-                <h4 class="cate-title text-primary">R </h4>
+                <h4 class="cate-title text-primary">R {{order?.attributes?.total}}</h4>
               </div>
             </div>
           </div>

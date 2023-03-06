@@ -14,18 +14,22 @@ export class OrdersComponent implements OnInit {
 
   constructor(private orderService: OrdersServiceService) { }
 
+
+
+  public selector( id:any){
+    this.orderService.getOrderById(id).subscribe((booking: any) =>{
+      this.order = booking.data;
+      this.cartDetails = this.order.attributes.cartDetails;
+      console.log(this.cartDetails, "qwerty")
+    })
+  }
+
   ngOnInit(): void {
     this.orderService.getOrders().subscribe((booking: any) =>{
       this.orders = booking.data;
       console.log(this.orders)
     })
-
-    const orderId = 2;
-    this.orderService.getOrderById(orderId).subscribe((booking: any) =>{
-      this.order = booking.data;
-      this.cartDetails = this.order.attributes.cartDetails;
-      console.log(this.cartDetails, "qwerty")
-    })
+   
   }
   
 
