@@ -11,7 +11,7 @@ import { BookingsService } from 'src/app/service/bookings.service';
 export class BookingsComponent implements OnInit {
 bookings: any;
 
-// itemId=1;
+
 
   constructor(private http:HttpClient, private BookingsService:BookingsService) { }
 
