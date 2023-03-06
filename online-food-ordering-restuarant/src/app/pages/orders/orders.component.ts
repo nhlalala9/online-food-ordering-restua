@@ -29,8 +29,6 @@ export class OrdersComponent implements OnInit {
       this.orders = booking.data;
       console.log(this.orders)
     })
-
-    const orderId = 11;
    
   }
   
