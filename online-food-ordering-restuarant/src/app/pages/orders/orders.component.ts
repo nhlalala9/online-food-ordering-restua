@@ -30,7 +30,7 @@ export class OrdersComponent implements OnInit {
     const orderId = 2;
     this.orderService.getOrderById(orderId).subscribe((booking: any) =>{
       this.order = booking.data;
-      this.cartDetails = this.order.data.attributes.cartDetails;
+      this.cartDetails = this.order.data;
       console.log(this.cartDetails)
     })
   }
