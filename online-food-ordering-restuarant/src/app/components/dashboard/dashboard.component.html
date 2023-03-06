@@ -92,8 +92,8 @@
 
       <div class="cards-single">
         <div>
-          <h1>54</h1>
-          <span>orders</span>
+          <h1>{{orders.length}}</h1>
+          <span>Orders</span>
         </div>
         <div>
           <span class="las la-clipboard-list"></span>
@@ -143,46 +143,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr *ngFor="let item of orders">
                     <td>
                       <img
                         src="https://imgs.search.brave.com/gybr2z21QQAvGFDrw7JALBGSm80f3gXChshf5SMhLsU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/YXRhdm9sYS5oay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOS8w/NS9wZXBwZXJvbmkt/cGl6emEuanBn"
                         width="40px" height="40px" alt="" />
                     </td>
-                    <td>Pizza</td>
-                    <td>R 120</td>
-                    <td>39 Collins st</td>
+                    <td>{{item?.attributes.name}}</td>
+                    <td>R {{item?.attributes.total}}</td>
+                    <td>{{item?.attributes.address}}</td>
                   </tr>
-                  <tr>
-                    <td>
-                      <img
-                        src="https://imgs.search.brave.com/gybr2z21QQAvGFDrw7JALBGSm80f3gXChshf5SMhLsU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/YXRhdm9sYS5oay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOS8w/NS9wZXBwZXJvbmkt/cGl6emEuanBn"
-                        width="40px" height="40px" alt="" />
-                    </td>
-                    <td>Pizza</td>
-                    <td>R 120</td>
-                    <td>39 Collins st</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        src="https://imgs.search.brave.com/gybr2z21QQAvGFDrw7JALBGSm80f3gXChshf5SMhLsU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/YXRhdm9sYS5oay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOS8w/NS9wZXBwZXJvbmkt/cGl6emEuanBn"
-                        width="40px" height="40px" alt="" />
-                    </td>
-                    <td>Pizza</td>
-                    <td>R 120</td>
-                    <td>39 Collins st</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        src="https://imgs.search.brave.com/gybr2z21QQAvGFDrw7JALBGSm80f3gXChshf5SMhLsU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/YXRhdm9sYS5oay93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOS8w/NS9wZXBwZXJvbmkt/cGl6emEuanBn"
-                        width="40px" height="40px" alt="" />
-                    </td>
-                    <td>Pizza</td>
-                    <td>R 120</td>
-                    <td>39 Collins st</td>
-                  </tr>
+                
+                    
                 </tbody>
               </table>
             </div>
@@ -198,7 +170,7 @@
           </div>
 
           <div class="card-body">
-            <div class="customer">
+            <!-- <div class="customer">
               <div class="info">
                 <img
                   src="https://imgs.search.brave.com/y8wURxq-pBrcExyyf6zCG8u5G8Za_K6KgYq5pOaFc3Q/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4z/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvYnVzaW5lc3Mt/MS00Mi8xMDAvVW50/aXRsZWQtMi0xNC01/MTIucG5n"
@@ -247,7 +219,7 @@
                 <span class="las la-phone"></span>
                 <span class="las la-car"></span>
               </div>
-            </div>
+            </div> -->
 
 
           </div>
