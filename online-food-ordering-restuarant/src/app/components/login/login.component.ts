@@ -6,7 +6,6 @@ import { AuthenticationService } from '../../service/authentication.service';
 import { StorageService } from '../../service/storage.service';
 import { ToastService } from '../../service/toast.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,10 +14,13 @@ import { ToastService } from '../../service/toast.service';
 export class LoginComponent implements OnDestroy {
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(40)]],
+    password: [
+      '',
+      [Validators.required, Validators.minLength(6), Validators.maxLength(40)],
+    ],
   });
 
-  // submitted = false; 
+  // submitted = false;
   // errorMessage: String = " "
 
   private loginSub: Subscription | undefined;
@@ -28,7 +30,7 @@ export class LoginComponent implements OnDestroy {
     private router: Router,
     private toast: ToastService,
     private ss: StorageService
-  ) { }
+  ) {}
 
   ngOnDestroy(): void {
     if (this.loginSub) {
@@ -39,26 +41,25 @@ export class LoginComponent implements OnDestroy {
   login() {
     const credentials = this.loginForm.value;
 
-    this.loginSub = this.auth.login(
-      credentials.email,
-      credentials.password
-    ).subscribe(
-      resp => {
-        this.loginForm.reset();
+    this.loginSub = this.auth
+      .login(credentials.email, credentials.password)
+      .subscribe(
+        (resp) => {
+          this.loginForm.reset();
 
-        this.auth.persistUser(resp);
+          this.auth.persistUser(resp);
 
-        this.toast.showSuccess('Successfully logged in.');
+          this.toast.showSuccess('Successfully logged in.');
 
-        const attemptedRoute = this.ss.getItem('attemptedRoute');
-        this.ss.removeItem('attemptedRoute');
-        this.router.navigateByUrl(attemptedRoute || '/restuarant/dashboard')
-      },
-      () => {
-        this.toast.showDanger('Login unsuccessful. Check your credentials.');
-      }
-    );
+          const attemptedRoute = this.ss.getItem('attemptedRoute');
+          this.ss.removeItem('attemptedRoute');
+          this.router.navigateByUrl(attemptedRoute || '/restuarant/dashboard');
+        },
+        () => {
+          this.toast.showDanger('Login unsuccessful. Check your credentials.');
+        }
+      );
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
