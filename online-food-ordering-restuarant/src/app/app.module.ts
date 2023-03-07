@@ -20,6 +20,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { EditProductComponent } from './pages/edit-product/edit-product.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
+import { DatePipe } from '@angular/common';
 // import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
@@ -51,7 +52,7 @@ import { ReviewsComponent } from './pages/reviews/reviews.component';
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

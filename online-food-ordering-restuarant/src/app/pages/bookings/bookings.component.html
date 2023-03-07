@@ -105,19 +105,19 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let booking of  searchBookings()">
-          <td>{{ booking.attributes.name }}</td>
-          <td>{{ booking.attributes.time }}</td>
-          <td>{{ booking.attributes.email }}</td>
-          <td>{{ booking.attributes.phone }}</td>
-          <td>{{ booking.attributes.guests }}</td>
-          <td>{{ booking.attributes.message }}</td>
-          <td>{{ booking.attributes.status }}</td>
+        <tr *ngFor="let item of  searchBookings()">
+          <td>{{ item.attributes.name }}</td>
+          <td>{{ item.attributes.time }}</td>
+          <td>{{ item.attributes.email }}</td>
+          <td>{{ item.attributes.phone }}</td>
+          <td>{{ item.attributes.guests }}</td>
+          <td>{{ item.attributes.message }}</td>
+          <td>{{ item.attributes.status }}</td>
           <td>
             <button
               class="status-btn"
-              *ngIf="booking.attributes.status === 'Pending'"
-              (click)="approveItem(booking)"
+              *ngIf="item.attributes.status === 'Pending'"
+              (click)="approveItem(item)"
             >
               Approve
             </button>

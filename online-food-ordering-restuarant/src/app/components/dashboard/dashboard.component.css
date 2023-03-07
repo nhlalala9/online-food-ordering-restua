@@ -132,9 +132,14 @@ main {
 .cards {
   display: grid;
   /* justify-content: space-between; */
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, .5fr);
+  align-items: center;
   grid-gap: 2rem;
   margin-top: 1rem;
+  /* max-width: 80%; */
+  justify-content: center; /* Center the grid items horizontally */
+  align-items: center;
+  /* justify-items: center;  */
 }
 
 .cards-single {
