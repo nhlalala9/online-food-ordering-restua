@@ -12,7 +12,9 @@ import { Observable } from 'rxjs';
 export class ProductsComponent implements OnInit {
   products: any;
   apiUrl = 'http://localhost:1337';
-
+  searchTerm: string = '';
+  filteredProducts: any[] = [];
+ 
   constructor(
     private http: HttpClient,
     private ProductsService: ProductsService,
@@ -26,8 +28,16 @@ export class ProductsComponent implements OnInit {
   loadProducts() {
     this.ProductsService.getProducts().subscribe((products: any) => {
       this.products = products.data;
-      console.log(products.data);
+      this.filteredProducts = products.data;
+      // console.log(products.data, "all");
+      // console.log(this.filteredProducts, "filtered");
     });
+  }
+
+  search() {
+    this.filteredProducts = this.products.filter((product:any) =>
+      product.attributes.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
   }
 
   deleteProducts(id: number) {
@@ -41,4 +51,7 @@ export class ProductsComponent implements OnInit {
       );
     }
   }
+
+
+ 
 }
