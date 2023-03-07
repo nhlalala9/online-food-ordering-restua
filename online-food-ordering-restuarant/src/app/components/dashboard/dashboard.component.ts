@@ -12,6 +12,8 @@ export class DashboardComponent implements OnInit {
   product: any;
   isLoading = false;
   orders: any[] = [];
+  products: any[] = [];
+  searchTerm: string = '';
 
   constructor(
     private http: HttpClient,
@@ -31,4 +33,14 @@ export class DashboardComponent implements OnInit {
       console.log(this.orders, 'why');
     });
   }
+
+  // searchProducts() {
+  //   this.ProductsService.searchProducts(this.searchTerm).subscribe((data) => {
+  //     this.products = data;
+  //   });
+  // }
+
+  // onSearch() {
+  //   this.searchProducts();
+  // }
 }

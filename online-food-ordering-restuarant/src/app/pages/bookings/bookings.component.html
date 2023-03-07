@@ -63,7 +63,7 @@
 
     <div class="search-wrapper">
       <span class="las la-search"></span>
-      <input type="search" placeholder="search here" />
+      <input type="search" placeholder="search here" [(ngModel)]="searchTerm" (keyup)=" searchBookings()"  />
     </div>
 
     <div class="user-wrapper">
@@ -105,7 +105,7 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let booking of bookings">
+        <tr *ngFor="let booking of  searchBookings()">
           <td>{{ booking.attributes.name }}</td>
           <td>{{ booking.attributes.time }}</td>
           <td>{{ booking.attributes.email }}</td>

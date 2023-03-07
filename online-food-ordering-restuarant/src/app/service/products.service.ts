@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -13,6 +13,7 @@ export class ProductsService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/api/products?populate=*`);
   }
+
   createProducts(product: any): Observable<any> {
     console.log(product);
     return this.http.post(`${this.apiUrl}/api/products`, product);
@@ -32,4 +33,7 @@ export class ProductsService {
     const url = `${this.apiUrl}/api/products/${id}`;
     return this.http.delete(url);
   }
-}
+
+  
+  }
+

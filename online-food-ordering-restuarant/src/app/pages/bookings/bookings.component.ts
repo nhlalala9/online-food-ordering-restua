@@ -8,8 +8,10 @@ import { BookingsService } from 'src/app/service/bookings.service';
   styleUrls: ['./bookings.component.css'],
 })
 export class BookingsComponent implements OnInit {
-  bookings: any;
-
+  
+  searchTerm: string = '';
+  bookings: any[] = [];
+ 
   constructor(
     private http: HttpClient,
     private BookingsService: BookingsService
@@ -20,8 +22,13 @@ export class BookingsComponent implements OnInit {
       this.bookings = booking.data;
       console.log(this.bookings);
     });
+    this.searchBookings()
   }
-
+  searchBookings(): any[] {
+    return this.bookings.filter((booking: any) =>
+      booking.attributes.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
   approveItem(booking: any) {
     const id = booking.id;
     const status = 'Approved';
