@@ -14,7 +14,7 @@
       <!-- <li>
         <a href="restuarant/customers"><span class="las la-user-friends"></span>
           <span>Customers</span></a>
-       
+
       </li> -->
       <li>
         <a href="restuarant/products"
@@ -29,7 +29,7 @@
       <!-- <li>
         <a href="restuarant/drivers"><span class="las la-car"></span>
           <span>Drivers</span></a>
-       
+
       </li> -->
       <li>
         <a href="/restuarant/bookings"
@@ -95,9 +95,11 @@
                   aria-selected="true"
                   class="nav-link active"
                   tabindex="0"
-                  href="#"
+                  (click)="setTab('order')"
                   >Order in</a
-                ><a
+                >
+
+                <a
                   id="react-aria31190898-8-tab-Prepared"
                   role="tab"
                   data-rr-ui-event-key="Prepared"
@@ -105,9 +107,11 @@
                   aria-selected="false"
                   tabindex="-1"
                   class="nav-link"
-                  href="#"
-                  >Prepared</a
-                ><a
+                  (click)="setTab('prepared')"
+                  >Preparing</a
+                >
+
+                <a
                   id="react-aria31190898-8-tab-Delivered"
                   role="tab"
                   data-rr-ui-event-key="Delivered"
@@ -115,177 +119,177 @@
                   aria-selected="false"
                   tabindex="-1"
                   class="nav-link"
-                  href="#"
+                  (click)="setTab('completed')"
                   >Delivered</a
                 >
               </div>
             </nav>
             <div class="tab-content">
-              <div
-                role="tabpanel"
-                id="react-aria31190898-8-tabpane-Order"
-                aria-labelledby="react-aria31190898-8-tab-Order"
-                class="fade tab-pane active show"
-                *ngFor="let item of orders"
-              >
+              <div *ngIf="tab === 'order'">
                 <div
-                  (click)="selector(item?.id)"
-                  class="orderin-bx d-flex align-items-center justify-content-between click"
+                  role="tabpanel"
+                  id="react-aria31190898-8-tabpane-Order"
+                  aria-labelledby="react-aria31190898-8-tab-Order"
+                  class="fade tab-pane active show"
+                  *ngFor="let item of orders"
                 >
-                  <div>
-                    <h4>Order #{{ item?.id }}</h4>
-                    <span>{{ item?.attributes.date }}</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">
-                      R {{ item?.attributes.total }}
-                    </h4>
+                  <div
+                    (click)="selector(item?.id)"
+                    class="orderin-bx d-flex align-items-center justify-content-between click"
+                  >
+                    <div>
+                      <h4>Order #{{ item?.id }}</h4>
+                      <span>{{ item?.attributes.date }}</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">
+                        R {{ item?.attributes.total }}
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div
-                role="tabpanel"
-                id="react-aria31190898-8-tabpane-Prepared"
-                aria-labelledby="react-aria31190898-8-tab-Prepared"
-                class="fade tab-pane"
-              >
+
+              <div *ngIf="tab === 'prepared'">
                 <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
+
                 >
-                  <div>
-                    <h4>Prepared</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Prepared</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Prepared</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Prepared</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Prepared</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Prepared</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Prepared</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Prepared</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
-                  </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Prepared</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
-                  </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Prepared</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
-                  </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Prepared</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Prepared</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div
-                role="tabpanel"
-                id="react-aria31190898-8-tabpane-Delivered"
-                aria-labelledby="react-aria31190898-8-tab-Delivered"
-                class="fade tab-pane"
-              >
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Delivered</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
+
+              <div *ngIf="tab === 'completed'">
+                <div>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Delivered</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Delivered</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Delivered</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Delivered</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Delivered</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Delivered</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Delivered</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
-                  </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Delivered</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
-                  </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Delivered</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
-                  </div>
-                </div>
-                <div
-                  class="orderin-bx d-flex align-items-center justify-content-between"
-                >
-                  <div>
-                    <h4>Delivered</h4>
-                    <span>June 1, 2020, 08:22 AM</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <h4 class="text-primary mb-0">$202.00</h4>
+                  <div
+                    class="orderin-bx d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <h4>Delivered</h4>
+                      <span>June 1, 2020, 08:22 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <h4 class="text-primary mb-0">$202.00</h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -339,7 +343,7 @@
                 >
                   <img
                     class="me-3"
-                    src={{item?.attributus?.Picture?.data?.attributes?.url}}
+                    src="{{ item?.attributus?.Picture?.data?.attributes?.url }}"
                     alt=""
                   />
                   <div>
@@ -375,7 +379,10 @@
               class="btn btn-outline-danger me-sm-4 me-2"
               href="/react/demo/orders"
               >Reject Order</a
-            ><a class="btn btn-primary" href="/react/demo/orders"
+            ><a
+              class="btn btn-primary"
+              *ngIf="order?.attributes?.status === 'Pending'"
+              (click)="approveItem(order)"
               >Accept Order</a
             >
           </div>
@@ -383,5 +390,4 @@
       </div>
     </div>
   </div>
-
 </div>
