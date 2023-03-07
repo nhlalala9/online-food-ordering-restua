@@ -70,8 +70,9 @@
       </h1>
 
       <div class="search-wrapper">
-        <span class="las la-search"></span>
-        <input type="search" placeholder="search here" />
+        <span class="las la-search" (click)="search()"></span>
+        <input type="text" placeholder="search here"  [(ngModel)]="searchTerm" (keyup)="search()"  />
+     
       </div>
 
       <div class="user-wrapper">
@@ -111,7 +112,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xl-3 col-xxl-4 col-sm-6" *ngFor="let product of products">
+    <div class="col-xl-3 col-xxl-4 col-sm-6" *ngFor="let product of filteredProducts">
       <div class="card dishe-bx b-hover style-1">
         <div class="card-body pb-0 pt-3">
           <div class="text-center mb-2 ">
