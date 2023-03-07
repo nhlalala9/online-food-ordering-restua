@@ -13,7 +13,6 @@ export class ProductsComponent implements OnInit {
   products: any;
   apiUrl = 'http://localhost:1337';
   searchTerm: string = '';
-  // products: any[];
   filteredProducts: any[] = [];
  
   constructor(
@@ -36,10 +35,10 @@ export class ProductsComponent implements OnInit {
   }
 
   search() {
-    // use Array.filter() to filter the products based on the search term
     this.filteredProducts = this.products.filter((product:any) =>
       product.attributes.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );}
+    );
+  }
 
   deleteProducts(id: number) {
     if (confirm('Do you really want to delete this product')) {

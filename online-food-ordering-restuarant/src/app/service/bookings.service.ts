@@ -14,6 +14,8 @@ export class BookingsService {
     return this.http.get<any[]>(`${this.apiUrl}`);
   }
 
+  
+
   updateItemStatus(id: any, status: any) {
     const url = `${this.apiUrl}/${id}`;
     const data = { data: { status: status } };
