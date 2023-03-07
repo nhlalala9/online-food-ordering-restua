@@ -155,69 +155,15 @@
 
                 >
                   <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
+                    class="orderin-bx d-flex align-items-center justify-content-between" *ngFor="let item of Delivering"
                   >
                     <div>
                       <h4>Prepared</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
+                      <h6>Order #{{ item?.id }}</h6>
+                      <span>{{ item?.attributes.date }}</span>
                     </div>
                     <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Prepared</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Prepared</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Prepared</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Prepared</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Prepared</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
+                      <h4 class="text-primary mb-0">R {{ item?.attributes.total }}</h4>
                     </div>
                   </div>
                 </div>
@@ -226,69 +172,15 @@
               <div *ngIf="tab === 'completed'">
                 <div>
                   <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
+                    class="orderin-bx d-flex align-items-center justify-content-between"*ngFor="let item of complete"
                   >
                     <div>
                       <h4>Delivered</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
+                      <h6>Order #{{ item?.id }}</h6>
+                      <span>{{ item?.attributes.date }}</span>
                     </div>
                     <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Delivered</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Delivered</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Delivered</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Delivered</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
-                    </div>
-                  </div>
-                  <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"
-                  >
-                    <div>
-                      <h4>Delivered</h4>
-                      <span>June 1, 2020, 08:22 AM</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <h4 class="text-primary mb-0">$202.00</h4>
+                      <h4 class="text-primary mb-0">R {{ item?.attributes.total }}</h4>
                     </div>
                   </div>
                 </div>
