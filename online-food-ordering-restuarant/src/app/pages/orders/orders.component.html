@@ -156,6 +156,7 @@
                 >
                   <div
                     class="orderin-bx d-flex align-items-center justify-content-between" *ngFor="let item of Delivering"
+                    (click)="selector(item?.id)"
                   >
                     <div>
                       <h4>Prepared</h4>
@@ -172,7 +173,7 @@
               <div *ngIf="tab === 'completed'">
                 <div>
                   <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"*ngFor="let item of complete"
+                    class="orderin-bx d-flex align-items-center justify-content-between"*ngFor="let item of complete" (click)="selector(item?.id)"
                   >
                     <div>
                       <h4>Delivered</h4>
