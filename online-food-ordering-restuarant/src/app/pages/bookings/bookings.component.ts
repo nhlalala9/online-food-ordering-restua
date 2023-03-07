@@ -34,12 +34,12 @@ export class BookingsComponent implements OnInit {
     const id = item.id;
     const status = 'Approved';
     const notification = 'Your Booking has been Appproved';
-    const camel = 'Pending';
+    // const camel = 'Pending';
 
     const index = this.bookings.findIndex((r: any) => r.id === item.id);
     console.log(index);
 
-    this.BookingsService.updateItemStatus(id, status, notification, camel).subscribe(
+    this.BookingsService.updateItemStatus(id, status, notification).subscribe(
       (res) => {
         console.log(res, 'see console');
         window.location.reload();

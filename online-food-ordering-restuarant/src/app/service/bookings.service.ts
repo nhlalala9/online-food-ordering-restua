@@ -14,10 +14,10 @@ export class BookingsService {
     return this.http.get<any[]>(`${this.apiUrl}`);
   }
 
-  updateItemStatus(id: any, status: any, camel: any, notification: any) {
+  updateItemStatus(id: any, status: any, notification: any) {
     const url = `${this.apiUrl}/${id}`;
     const data = {
-      data: { status: status, notification: notification, camel: camel },
+      data: { status: status, notification: notification },
     };
     return this.http.put(url, data);
   }
