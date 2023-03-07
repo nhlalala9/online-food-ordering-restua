@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <div class="cards-single">
+      <!-- <div class="cards-single">
         <div>
           <h1>54</h1>
           <span>Drivers</span>
@@ -123,7 +123,7 @@
         <div>
           <span class="las la-car"></span>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="recent-grid">
@@ -173,63 +173,34 @@
       <div class="customers">
         <div class="card">
           <div class="card-header">
-            <h3>Drivers</h3>
-            <button routerLink="/restuarant/drivers">
+            <h3>Bookings</h3>
+            <button routerLink="/restuarant/bookings">
               See all <span class="las la-arrow-right"></span>
             </button>
           </div>
 
           <div class="card-body">
-            <!-- <div class="customer">
+            <div class="customer" *ngFor="let item of nothing">
               <div class="info">
-                <img
+                <!-- <img
                   src="https://imgs.search.brave.com/y8wURxq-pBrcExyyf6zCG8u5G8Za_K6KgYq5pOaFc3Q/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4z/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvYnVzaW5lc3Mt/MS00Mi8xMDAvVW50/aXRsZWQtMi0xNC01/MTIucG5n"
-                  alt="" width="40px" height="40px" />
+                  alt="" width="40px" height="40px" /> -->
                 <div>
-                  <h4>Jones Smith</h4>
-                  <small>JV 64 PK GP</small>
+                  <h3>{{item?.attributes.name}}</h3>
+                  <small>{{item?.attributes.time | date:'dd MMM yyyy'}}</small>
                 </div>
               </div>
               <div class="contact">
-                <span class="las la-user-circle"></span>
-                <span class="las la-phone"></span>
-                <span class="las la-car"></span>
+                
+                <span class="las la-phone"> {{item?.attributes.phone}}</span>
+              
               </div>
+              
             </div>
+            <!-- <hr/> -->
 
-            <div class="customer">
-              <div class="info">
-                <img
-                  src="https://imgs.search.brave.com/y8wURxq-pBrcExyyf6zCG8u5G8Za_K6KgYq5pOaFc3Q/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4z/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvYnVzaW5lc3Mt/MS00Mi8xMDAvVW50/aXRsZWQtMi0xNC01/MTIucG5n"
-                  alt="" width="40px" height="40px" />
-                <div>
-                  <h4>Jones Smith</h4>
-                  <small>JV 64 PK GP</small>
-                </div>
-              </div>
-              <div class="contact">
-                <span class="las la-user-circle"></span>
-                <span class="las la-phone"></span>
-                <span class="las la-car"></span>
-              </div>
-            </div>
 
-            <div class="customer">
-              <div class="info">
-                <img
-                  src="https://imgs.search.brave.com/y8wURxq-pBrcExyyf6zCG8u5G8Za_K6KgYq5pOaFc3Q/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9jZG4z/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvYnVzaW5lc3Mt/MS00Mi8xMDAvVW50/aXRsZWQtMi0xNC01/MTIucG5n"
-                  alt="" width="40px" height="40px" />
-                <div>
-                  <h4>Jones Smith</h4>
-                  <small>JV 64 PK GP</small>
-                </div>
-              </div>
-              <div class="contact">
-                <span class="las la-user-circle"></span>
-                <span class="las la-phone"></span>
-                <span class="las la-car"></span>
-              </div>
-            </div> -->
+           
           </div>
         </div>
       </div>
