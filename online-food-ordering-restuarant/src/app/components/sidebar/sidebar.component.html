@@ -63,10 +63,10 @@
     </h1>
 
     <div class="search-wrapper">
-      <span class="las la-search"></span>
-      <input type="text" placeholder="search here" />
+      <span class="las la-search" (click)="search()"></span>
+      <input type="text" placeholder="search here"  [(ngModel)]="searchTerm" (keyup)="search()"  />
+   
     </div>
-
     <div class="user-wrapper">
       <img
         src="https://cdn-icons-png.flaticon.com/512/25/25634.png"
