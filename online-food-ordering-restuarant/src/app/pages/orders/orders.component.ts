@@ -14,6 +14,8 @@ export class OrdersComponent implements OnInit {
   complete:any[] = [];
 Delivering:any[] = [];
 approved:any[] = []
+
+
   constructor(private orderService: OrdersServiceService) {}
 
   public selector(id: any) {
@@ -47,7 +49,7 @@ approved:any[] = []
   approveItem(booking: any) {
     const id = booking.id;
     const status = 'Approved';
-    
+
     const index = this.orders.findIndex((r: any) => r.id === booking.id);
     console.log(index);
 
