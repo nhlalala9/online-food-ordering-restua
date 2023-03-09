@@ -15,8 +15,6 @@
     z-index: 100;
     transition: left 300ms;
     background: #fff;
-    /* transition: left 300ms; */
-    /* height: 50px; */
   }
   .log {
     margin-bottom: 100%;
@@ -109,7 +107,6 @@
   .user-wrapper img {
     border-radius: 50%;
     margin-right: 1rem;
-    /* height: inherit; */
   }
   
   .user-wrapper h4 {
@@ -119,7 +116,6 @@
   .user-wrapper small {
     display: inline-block;
     color: gray;
-    /* margin-top: ; */
   }
   
   main {
@@ -131,7 +127,6 @@
   
   .cards {
     display: grid;
-    /* justify-content: space-between; */
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     margin-top: 1rem;
@@ -145,9 +140,6 @@
     border-radius: 10px;
   }
   
-  /* .cards-single h1 + span {
-      color: gray;
-  } */
   
   .cards-single div:first-child span {
     color: gray;
@@ -166,7 +158,6 @@
   .cards-single:last-child div:first-child span,
   .cards-single:last-child div:last-child span {
     color: #fff;
-    /* 21.31 */
   }
   
   .recent-grid {
@@ -269,7 +260,6 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    /* font-family: 'Poppins', sans-serif; */
   }
   
   .sidebar {
@@ -278,7 +268,6 @@
     left: 0;
     top: 0;
     height: 100%;
-    /* text-decoration: none; */
     background: blue;
     z-index: 100;
     transition: width 300ms;
@@ -288,7 +277,6 @@
     height: 90px;
     padding: 1rem 0rem 1rem 2rem;
     color: #fff;
-    /* text-decoration: none; */
   }
   
   .sidebar-menu {
@@ -316,7 +304,6 @@
     display: block;
     color: #fff;
     font-size: 1.1rem;
-    /* text-decoration: none; */
   }
   
   .sidebar-menu a.active {
@@ -415,7 +402,6 @@
     header h2 span {
       text-align: center;
       padding-right: 0rem;
-      /* display: flex; */
     }
   
     header h2 {
@@ -463,7 +449,6 @@
       height: 40px;
       width: 40px;
       justify-content: center !important;
-      /* text-align: center; */
       border-radius: 50%;
       color: #fff;
       display: flex;

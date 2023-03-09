@@ -283,12 +283,6 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
-/* .btn-primary {
-    background-color: #fc8019;
-    background-color: var(--primary);
-    border-color: #fc8019;
-    border-color: var(--primary);
-} */
 .btn {
   border-radius: 0.5rem;
   font-size: 14px;
