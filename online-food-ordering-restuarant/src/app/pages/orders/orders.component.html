@@ -225,6 +225,12 @@
                         {{ order?.attributes?.address }}<br />
                       </h5>
                     </div>
+                    <div class="d-flex align-items-center mb-2" *ngIf="order?.attributes?.status === 'Completed'">
+                      <i class="las la-car fa-3x"></i>
+                      <h5 class="mb-0 ml-5">
+                        {{ order?.attributes?.driver }}<br />
+                      </h5>
+                    </div>
                   </div>
                 </div>
 
