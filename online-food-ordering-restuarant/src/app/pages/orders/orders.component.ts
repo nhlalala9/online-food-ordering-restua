@@ -15,6 +15,9 @@ export class OrdersComponent implements OnInit {
 Delivering:any[] = [];
 approved:any[] = []
 
+pageSize = 5;
+currentPage = 1;
+
 
   constructor(private orderService: OrdersServiceService) {}
 

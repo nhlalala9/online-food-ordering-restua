@@ -21,6 +21,7 @@ import { AddProductComponent } from './pages/add-product/add-product.component';
 import { EditProductComponent } from './pages/edit-product/edit-product.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { DatePipe } from '@angular/common';
+import { NgxPaginationModule } from 'ngx-pagination';
 // import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
@@ -50,6 +51,7 @@ import { DatePipe } from '@angular/common';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxPaginationModule
     // ToastrModule.forRoot(),
   ],
   providers: [DatePipe],
