@@ -47,13 +47,5 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  // searchProducts() {
-  //   this.ProductsService.searchProducts(this.searchTerm).subscribe((data) => {
-  //     this.products = data;
-  //   });
-  // }
-
-  // onSearch() {
-  //   this.searchProducts();
-  // }
+ 
 }

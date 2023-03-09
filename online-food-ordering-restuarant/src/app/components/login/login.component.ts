@@ -20,8 +20,7 @@ export class LoginComponent implements OnDestroy {
     ],
   });
 
-  // submitted = false;
-  // errorMessage: String = " "
+
 
   private loginSub: Subscription | undefined;
   constructor(
