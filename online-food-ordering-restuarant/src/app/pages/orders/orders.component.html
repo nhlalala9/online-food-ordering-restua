@@ -133,7 +133,7 @@
                   id="react-aria31190898-8-tabpane-Order"
                   aria-labelledby="react-aria31190898-8-tab-Order"
                   class="fade tab-pane active show"
-                  *ngFor="let item of orders"
+                  *ngFor="let item of orders | paginate: { itemsPerPage: pageSize, currentPage: currentPage }"
                 >
                   <div
                     (click)="selector(item?.id)"
@@ -150,6 +150,9 @@
                     </div>
                   </div>
                 </div>
+                <div class="pagination">
+                  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+                </div>
               </div>
 
               <div *ngIf="tab === 'prepared'">
@@ -157,7 +160,7 @@
 
                 >
                   <div
-                    class="orderin-bx d-flex align-items-center justify-content-between" *ngFor="let item of Delivering"
+                    class="orderin-bx d-flex align-items-center justify-content-between" *ngFor="let item of Delivering | paginate: { itemsPerPage: pageSize, currentPage: currentPage }"
                     (click)="selector(item?.id)"
                   >
                     <div>
@@ -170,12 +173,15 @@
                     </div>
                   </div>
                 </div>
+                <div class="pagination">
+                  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+                </div>
               </div>
 
               <div *ngIf="tab === 'completed'">
                 <div>
                   <div
-                    class="orderin-bx d-flex align-items-center justify-content-between"*ngFor="let item of complete" (click)="selector(item?.id)"
+                    class="orderin-bx d-flex align-items-center justify-content-between"*ngFor="let item of complete | paginate: { itemsPerPage: pageSize, currentPage: currentPage }" (click)="selector(item?.id)"
                   >
                     <div>
                       <h4 style="color: green;"><i class="las la-list-alt"></i> Delivered</h4>
@@ -186,6 +192,9 @@
                       <h4 class="text-primary mb-0">R {{ item?.attributes.total }}</h4>
                     </div>
                   </div>
+                </div>
+                <div class="pagination">
+                  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
                 </div>
               </div>
             </div>
