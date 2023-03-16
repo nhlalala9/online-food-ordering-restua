@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  /* font-family: 'Poppins', sans-serif; */
+
 }
 
 .main-content {
@@ -23,8 +23,7 @@ header {
   z-index: 100;
   transition: left 300ms;
   background: #fff;
-  /* transition: left 300ms; */
-  /* height: 50px; */
+ 
 }
 #nav-toggle {
   display: none;
@@ -67,14 +66,7 @@ header label span {
   padding-right: 1rem;
 }
 
-/* .search-wrapper {
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
-} */
+
 
 .user-wrapper {
   display: flex;
@@ -84,7 +76,7 @@ header label span {
 .user-wrapper img {
   border-radius: 50%;
   margin-right: 1rem;
-  /* height: inherit; */
+
 }
 
 .user-wrapper h4 {
@@ -94,7 +86,7 @@ header label span {
 .user-wrapper small {
   display: inline-block;
   color: gray;
-  /* margin-top: ; */
+
 }
 
 #nav-toggle {
@@ -168,7 +160,7 @@ header label span {
 .user-wrapper img {
   border-radius: 50%;
   margin-right: 1rem;
-  /* height: inherit; */
+
 }
 
 .user-wrapper h4 {
@@ -178,7 +170,7 @@ header label span {
 .user-wrapper small {
   display: inline-block;
   color: gray;
-  /* margin-top: ; */
+
 }
 
 .sidebar {
@@ -187,7 +179,6 @@ header label span {
   left: 0;
   top: 0;
   height: 100%;
-  /* text-decoration: none; */
   background: blue;
   z-index: 100;
   transition: width 300ms;
@@ -216,7 +207,6 @@ header label span {
   height: 90px;
   padding: 1rem 0rem 1rem 2rem;
   color: #fff;
-  /* text-decoration: none; */
 }
 
 .sidebar-menu {
@@ -244,7 +234,7 @@ header label span {
   display: block;
   color: #fff;
   font-size: 1.1rem;
-  /* text-decoration: none; */
+
 }
 
 .sidebar-menu a.active {
@@ -347,7 +337,7 @@ header label span {
   header h2 span {
     text-align: center;
     padding-right: 0rem;
-    /* display: flex; */
+
   }
 
   header h2 {
@@ -395,7 +385,6 @@ header label span {
     height: 40px;
     width: 40px;
     justify-content: center !important;
-    /* text-align: center; */
     border-radius: 50%;
     color: #fff;
     display: flex;
@@ -611,18 +600,10 @@ button {
   color: #fff;
 }
 .grid-tab .nav-link {
-  /* border: 1px solid #dbdbdb; */
   height: 3rem;
-  /* padding: 0; */
-  /* width: 3rem; */
 }
+
 .nav-pills .nav-link {
-  /* border-radius: 0.5rem; */
-  /* padding: 0.75rem 1.25rem; */
-}
-.nav-pills .nav-link {
-  /* background: none; */
-  /* border: 0; */
   border-radius: 0.75rem;
 }
 [type="button"]:not(:disabled),

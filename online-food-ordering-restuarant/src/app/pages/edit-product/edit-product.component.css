@@ -26,7 +26,7 @@ header {
   z-index: 100;
   transition: left 300ms;
   background: #fff;
-  /* transition: left 300ms; */
+
   height: 84px;
 }
 
@@ -101,7 +101,7 @@ header label span {
 .user-wrapper img {
   border-radius: 50%;
   margin-right: 1rem;
-  /* height: inherit; */
+
 }
 
 .user-wrapper h4 {
@@ -111,7 +111,7 @@ header label span {
 .user-wrapper small {
   display: inline-block;
   color: gray;
-  /* margin-top: ; */
+
 }
 
 .sidebar {
@@ -120,7 +120,6 @@ header label span {
   left: 0;
   top: 0;
   height: 100%;
-  /* text-decoration: none; */
   background: blue;
   z-index: 100;
   padding-left: 0;
@@ -132,7 +131,7 @@ header label span {
   height: 90px;
   padding: 1rem 0rem 1rem 2rem;
   color: #fff;
-  /* text-decoration: none; */
+
 }
 
 .sidebar-menu {
@@ -160,7 +159,7 @@ header label span {
   display: block;
   color: #fff;
   font-size: 1.1rem;
-  /* text-decoration: none; */
+
 }
 
 .sidebar-menu a.active {
@@ -307,7 +306,7 @@ header label span {
     height: 40px;
     width: 40px;
     justify-content: center !important;
-    /* text-align: center; */
+  
     border-radius: 50%;
     color: #fff;
     display: flex;
@@ -322,8 +321,7 @@ header label span {
 }
 
 * {
-  /* padding: 0; */
+
   padding-left: 0;
-  /* box-sizing: border-box; */
-  /* text-decoration: none; */
+
 }

@@ -28,8 +28,6 @@ export class SidebarComponent implements OnInit {
     this.ProductsService.getProducts().subscribe((products: any) => {
       this.products = products.data;
       this.filteredProducts = products.data;
-      // console.log(products.data, "all");
-      // console.log(this.filteredProducts, "filtered");
     });
   }
 

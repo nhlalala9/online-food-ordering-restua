@@ -14,9 +14,6 @@ header {
     z-index: 100;
     transition: left 300ms;
     background: #fff;
-    /* transition: left 300ms; */
-    /* height: 50px; */
-
 }
 
 .main-content {
@@ -54,7 +51,7 @@ header {
     padding-right: 1.5rem !important;
 }
 thead tr {
-    /* border-top: 1px solid #f0f0f0; */
+
     border-bottom: 1px solid grey;
 }
 
@@ -72,7 +69,7 @@ td {
     padding: .5rem 1rem;
     font-size: .9rem;
     color: #222;
-    /* border-top: 1px solid #f0f0f0;  */
+ 
 }
 
 td img {
@@ -173,7 +170,7 @@ header label span {
 .user-wrapper img {
     border-radius: 50%;
     margin-right: 1rem;
-    /* height: inherit; */
+ 
 }
 
 .user-wrapper h4 {
@@ -183,7 +180,7 @@ header label span {
 .user-wrapper small {
     display: inline-block;
     color: gray;
-    /* margin-top: ; */
+    
 }
 
 
@@ -271,8 +268,6 @@ header label span {
     left: 0;
     top: 0;
     height: 100%;
-    /* text-decoration: none; */
-  
     background:blue;
     z-index: 100;
     transition: width 300ms;
@@ -282,9 +277,6 @@ header label span {
     height: 90px;
     padding: 1rem 0rem 1rem 2rem;
     color: #fff;
-    /* text-decoration: none; */
-
-
 }
 
 .sidebar-menu {
@@ -316,7 +308,7 @@ header label span {
     display: block;
     color: #fff;
     font-size: 1.1rem;
-    /* text-decoration: none; */
+    
 
 }
 
@@ -443,7 +435,7 @@ header h2{
 header h2 span{
     text-align: center;
     padding-right: 0rem;
-    /* display: flex; */
+ 
 }
 
 header h2{
@@ -502,7 +494,7 @@ header{
          height: 40px;
          width: 40px;
          justify-content: center !important; 
-         /* text-align: center; */
+      
          border-radius: 50%;
          color: #fff;
          display: flex;
